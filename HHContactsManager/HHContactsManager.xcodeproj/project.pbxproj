@@ -1,0 +1,1244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29AD27C6905AA7D3C7C3C4CA /* libPods-HHContactsManagerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7283926088D46C5B924F1FA8 /* libPods-HHContactsManagerTests.a */; };
+		7AD1D1B449252002041C316E /* libPods-HHContactsManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E667B1666D68A9030563A9C0 /* libPods-HHContactsManager.a */; };
+		9429003C21F6E18500D91818 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429003B21F6E18500D91818 /* AppDelegate.m */; };
+		9429003F21F6E18500D91818 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429003E21F6E18500D91818 /* ViewController.m */; };
+		9429004221F6E18500D91818 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9429004021F6E18500D91818 /* Main.storyboard */; };
+		9429004421F6E18800D91818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9429004321F6E18800D91818 /* Assets.xcassets */; };
+		9429004721F6E18800D91818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9429004521F6E18800D91818 /* LaunchScreen.storyboard */; };
+		9429004A21F6E18800D91818 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429004921F6E18800D91818 /* main.m */; };
+		9429005421F6E18800D91818 /* HHContactsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429005321F6E18800D91818 /* HHContactsManagerTests.m */; };
+		9429005F21F6E18800D91818 /* HHContactsManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429005E21F6E18800D91818 /* HHContactsManagerUITests.m */; };
+		9429007421F6EB5400D91818 /* NSString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429007021F6EB5300D91818 /* NSString+Ext.m */; };
+		9429007521F6EB5400D91818 /* HHPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429007121F6EB5300D91818 /* HHPerson.m */; };
+		9429007621F6EB5400D91818 /* HHContactManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9429007321F6EB5300D91818 /* HHContactManager.m */; };
+		C4D7F88361F604D6F3A4D5D4 /* libPods-HHContactsManagerUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF0122F02053A721189CB6F8 /* libPods-HHContactsManagerUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9429005021F6E18800D91818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9429002F21F6E18500D91818 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9429003621F6E18500D91818;
+			remoteInfo = HHContactsManager;
+		};
+		9429005B21F6E18800D91818 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9429002F21F6E18500D91818 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9429003621F6E18500D91818;
+			remoteInfo = HHContactsManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13121ADC22D95E8521BFFF80 /* Pods-HHContactsManagerUITests.debug-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.debug-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.debug-test.xcconfig"; sourceTree = "<group>"; };
+		1B59F6E9063EF54FCFDEC992 /* Pods-HHContactsManagerUITests.release-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.release-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.release-test.xcconfig"; sourceTree = "<group>"; };
+		1C06A921968DB9B1D2A5775B /* Pods-HHContactsManagerUITests.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		24BD3F14C1961DE3D6CE5302 /* Pods-HHContactsManager.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		305A0387C44D7C87CB93979E /* Pods-HHContactsManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		32169CC0FDFE66618504E02C /* Pods-HHContactsManager.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.release-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.release-dev.xcconfig"; sourceTree = "<group>"; };
+		408C1B6AB2C91E08F39E22BB /* Pods-HHContactsManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CD83FF6D7CA0329C8647092 /* Pods-HHContactsManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.release.xcconfig"; sourceTree = "<group>"; };
+		6FA7625BFC915B40641E94A3 /* Pods-HHContactsManagerTests.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.release-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.release-dev.xcconfig"; sourceTree = "<group>"; };
+		710789A277DB6208C0572BD1 /* Pods-HHContactsManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7283926088D46C5B924F1FA8 /* libPods-HHContactsManagerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHContactsManagerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F5C55A02D1977676091DEAD /* Pods-HHContactsManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.debug.xcconfig"; sourceTree = "<group>"; };
+		9349AE031FA345960BE89768 /* Pods-HHContactsManagerUITests.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.release-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.release-dev.xcconfig"; sourceTree = "<group>"; };
+		9429003721F6E18500D91818 /* HHContactsManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHContactsManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9429003A21F6E18500D91818 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9429003B21F6E18500D91818 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9429003D21F6E18500D91818 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9429003E21F6E18500D91818 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9429004121F6E18500D91818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9429004321F6E18800D91818 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9429004621F6E18800D91818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9429004821F6E18800D91818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9429004921F6E18800D91818 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9429004F21F6E18800D91818 /* HHContactsManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHContactsManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9429005321F6E18800D91818 /* HHContactsManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHContactsManagerTests.m; sourceTree = "<group>"; };
+		9429005521F6E18800D91818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9429005A21F6E18800D91818 /* HHContactsManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHContactsManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9429005E21F6E18800D91818 /* HHContactsManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHContactsManagerUITests.m; sourceTree = "<group>"; };
+		9429006021F6E18800D91818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9429006E21F6EB5300D91818 /* HHPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHPerson.h; sourceTree = "<group>"; };
+		9429006F21F6EB5300D91818 /* NSString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Ext.h"; sourceTree = "<group>"; };
+		9429007021F6EB5300D91818 /* NSString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Ext.m"; sourceTree = "<group>"; };
+		9429007121F6EB5300D91818 /* HHPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHPerson.m; sourceTree = "<group>"; };
+		9429007221F6EB5300D91818 /* HHContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHContactManager.h; sourceTree = "<group>"; };
+		9429007321F6EB5300D91818 /* HHContactManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHContactManager.m; sourceTree = "<group>"; };
+		A20ECB2CD925138FABE088D6 /* Pods-HHContactsManagerTests.debug-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.debug-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.debug-test.xcconfig"; sourceTree = "<group>"; };
+		A4FC9752B41155A4738D5DD7 /* Pods-HHContactsManagerTests.release-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.release-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.release-test.xcconfig"; sourceTree = "<group>"; };
+		B7D84754D9A84CC0F697E217 /* Pods-HHContactsManagerTests.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerTests.debug-dev.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerTests/Pods-HHContactsManagerTests.debug-dev.xcconfig"; sourceTree = "<group>"; };
+		C4168C00F330A182570046E6 /* Pods-HHContactsManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManagerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManagerUITests/Pods-HHContactsManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E55EE9C67AC0B626EDB8391A /* Pods-HHContactsManager.release-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.release-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.release-test.xcconfig"; sourceTree = "<group>"; };
+		E667B1666D68A9030563A9C0 /* libPods-HHContactsManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHContactsManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD6B0236644177B5F9AFA23B /* Pods-HHContactsManager.debug-test.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HHContactsManager.debug-test.xcconfig"; path = "Pods/Target Support Files/Pods-HHContactsManager/Pods-HHContactsManager.debug-test.xcconfig"; sourceTree = "<group>"; };
+		FF0122F02053A721189CB6F8 /* libPods-HHContactsManagerUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HHContactsManagerUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9429003421F6E18500D91818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AD1D1B449252002041C316E /* libPods-HHContactsManager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429004C21F6E18800D91818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AD27C6905AA7D3C7C3C4CA /* libPods-HHContactsManagerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429005721F6E18800D91818 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D7F88361F604D6F3A4D5D4 /* libPods-HHContactsManagerUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		659793E703746E20D2DB6624 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F5C55A02D1977676091DEAD /* Pods-HHContactsManager.debug.xcconfig */,
+				4CD83FF6D7CA0329C8647092 /* Pods-HHContactsManager.release.xcconfig */,
+				710789A277DB6208C0572BD1 /* Pods-HHContactsManagerTests.debug.xcconfig */,
+				305A0387C44D7C87CB93979E /* Pods-HHContactsManagerTests.release.xcconfig */,
+				408C1B6AB2C91E08F39E22BB /* Pods-HHContactsManagerUITests.debug.xcconfig */,
+				C4168C00F330A182570046E6 /* Pods-HHContactsManagerUITests.release.xcconfig */,
+				FD6B0236644177B5F9AFA23B /* Pods-HHContactsManager.debug-test.xcconfig */,
+				24BD3F14C1961DE3D6CE5302 /* Pods-HHContactsManager.debug-dev.xcconfig */,
+				E55EE9C67AC0B626EDB8391A /* Pods-HHContactsManager.release-test.xcconfig */,
+				32169CC0FDFE66618504E02C /* Pods-HHContactsManager.release-dev.xcconfig */,
+				A20ECB2CD925138FABE088D6 /* Pods-HHContactsManagerTests.debug-test.xcconfig */,
+				B7D84754D9A84CC0F697E217 /* Pods-HHContactsManagerTests.debug-dev.xcconfig */,
+				A4FC9752B41155A4738D5DD7 /* Pods-HHContactsManagerTests.release-test.xcconfig */,
+				6FA7625BFC915B40641E94A3 /* Pods-HHContactsManagerTests.release-dev.xcconfig */,
+				13121ADC22D95E8521BFFF80 /* Pods-HHContactsManagerUITests.debug-test.xcconfig */,
+				1C06A921968DB9B1D2A5775B /* Pods-HHContactsManagerUITests.debug-dev.xcconfig */,
+				1B59F6E9063EF54FCFDEC992 /* Pods-HHContactsManagerUITests.release-test.xcconfig */,
+				9349AE031FA345960BE89768 /* Pods-HHContactsManagerUITests.release-dev.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9429002E21F6E18500D91818 = {
+			isa = PBXGroup;
+			children = (
+				9429003921F6E18500D91818 /* HHContactsManager */,
+				9429005221F6E18800D91818 /* HHContactsManagerTests */,
+				9429005D21F6E18800D91818 /* HHContactsManagerUITests */,
+				9429003821F6E18500D91818 /* Products */,
+				659793E703746E20D2DB6624 /* Pods */,
+				E3F5F0FA3047ACB209BD5359 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9429003821F6E18500D91818 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9429003721F6E18500D91818 /* HHContactsManager.app */,
+				9429004F21F6E18800D91818 /* HHContactsManagerTests.xctest */,
+				9429005A21F6E18800D91818 /* HHContactsManagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9429003921F6E18500D91818 /* HHContactsManager */ = {
+			isa = PBXGroup;
+			children = (
+				9429006C21F6EAC500D91818 /* HHManager */,
+				9429003A21F6E18500D91818 /* AppDelegate.h */,
+				9429003B21F6E18500D91818 /* AppDelegate.m */,
+				9429003D21F6E18500D91818 /* ViewController.h */,
+				9429003E21F6E18500D91818 /* ViewController.m */,
+				9429006D21F6EAD200D91818 /* Others */,
+			);
+			path = HHContactsManager;
+			sourceTree = "<group>";
+		};
+		9429005221F6E18800D91818 /* HHContactsManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9429005321F6E18800D91818 /* HHContactsManagerTests.m */,
+				9429005521F6E18800D91818 /* Info.plist */,
+			);
+			path = HHContactsManagerTests;
+			sourceTree = "<group>";
+		};
+		9429005D21F6E18800D91818 /* HHContactsManagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9429005E21F6E18800D91818 /* HHContactsManagerUITests.m */,
+				9429006021F6E18800D91818 /* Info.plist */,
+			);
+			path = HHContactsManagerUITests;
+			sourceTree = "<group>";
+		};
+		9429006C21F6EAC500D91818 /* HHManager */ = {
+			isa = PBXGroup;
+			children = (
+				9429007221F6EB5300D91818 /* HHContactManager.h */,
+				9429007321F6EB5300D91818 /* HHContactManager.m */,
+				9429006E21F6EB5300D91818 /* HHPerson.h */,
+				9429007121F6EB5300D91818 /* HHPerson.m */,
+				9429006F21F6EB5300D91818 /* NSString+Ext.h */,
+				9429007021F6EB5300D91818 /* NSString+Ext.m */,
+			);
+			path = HHManager;
+			sourceTree = "<group>";
+		};
+		9429006D21F6EAD200D91818 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				9429004021F6E18500D91818 /* Main.storyboard */,
+				9429004321F6E18800D91818 /* Assets.xcassets */,
+				9429004521F6E18800D91818 /* LaunchScreen.storyboard */,
+				9429004821F6E18800D91818 /* Info.plist */,
+				9429004921F6E18800D91818 /* main.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		E3F5F0FA3047ACB209BD5359 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E667B1666D68A9030563A9C0 /* libPods-HHContactsManager.a */,
+				7283926088D46C5B924F1FA8 /* libPods-HHContactsManagerTests.a */,
+				FF0122F02053A721189CB6F8 /* libPods-HHContactsManagerUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9429003621F6E18500D91818 /* HHContactsManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9429006321F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManager" */;
+			buildPhases = (
+				F191A5CAE0A1BC821BC1E949 /* [CP] Check Pods Manifest.lock */,
+				9429003321F6E18500D91818 /* Sources */,
+				9429003421F6E18500D91818 /* Frameworks */,
+				9429003521F6E18500D91818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HHContactsManager;
+			productName = HHContactsManager;
+			productReference = 9429003721F6E18500D91818 /* HHContactsManager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9429004E21F6E18800D91818 /* HHContactsManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9429006621F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManagerTests" */;
+			buildPhases = (
+				8FF39FD0A8CB6F415887B8C9 /* [CP] Check Pods Manifest.lock */,
+				9429004B21F6E18800D91818 /* Sources */,
+				9429004C21F6E18800D91818 /* Frameworks */,
+				9429004D21F6E18800D91818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9429005121F6E18800D91818 /* PBXTargetDependency */,
+			);
+			name = HHContactsManagerTests;
+			productName = HHContactsManagerTests;
+			productReference = 9429004F21F6E18800D91818 /* HHContactsManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9429005921F6E18800D91818 /* HHContactsManagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9429006921F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManagerUITests" */;
+			buildPhases = (
+				BC1EF6499FCDD16B0CEABB30 /* [CP] Check Pods Manifest.lock */,
+				9429005621F6E18800D91818 /* Sources */,
+				9429005721F6E18800D91818 /* Frameworks */,
+				9429005821F6E18800D91818 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9429005C21F6E18800D91818 /* PBXTargetDependency */,
+			);
+			name = HHContactsManagerUITests;
+			productName = HHContactsManagerUITests;
+			productReference = 9429005A21F6E18800D91818 /* HHContactsManagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9429002F21F6E18500D91818 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "你在哪里呀";
+				TargetAttributes = {
+					9429003621F6E18500D91818 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					9429004E21F6E18800D91818 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9429003621F6E18500D91818;
+					};
+					9429005921F6E18800D91818 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 9429003621F6E18500D91818;
+					};
+				};
+			};
+			buildConfigurationList = 9429003221F6E18500D91818 /* Build configuration list for PBXProject "HHContactsManager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9429002E21F6E18500D91818;
+			productRefGroup = 9429003821F6E18500D91818 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9429003621F6E18500D91818 /* HHContactsManager */,
+				9429004E21F6E18800D91818 /* HHContactsManagerTests */,
+				9429005921F6E18800D91818 /* HHContactsManagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9429003521F6E18500D91818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9429004721F6E18800D91818 /* LaunchScreen.storyboard in Resources */,
+				9429004421F6E18800D91818 /* Assets.xcassets in Resources */,
+				9429004221F6E18500D91818 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429004D21F6E18800D91818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429005821F6E18800D91818 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FF39FD0A8CB6F415887B8C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HHContactsManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC1EF6499FCDD16B0CEABB30 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HHContactsManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F191A5CAE0A1BC821BC1E949 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HHContactsManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9429003321F6E18500D91818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9429003F21F6E18500D91818 /* ViewController.m in Sources */,
+				9429007421F6EB5400D91818 /* NSString+Ext.m in Sources */,
+				9429007621F6EB5400D91818 /* HHContactManager.m in Sources */,
+				9429007521F6EB5400D91818 /* HHPerson.m in Sources */,
+				9429004A21F6E18800D91818 /* main.m in Sources */,
+				9429003C21F6E18500D91818 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429004B21F6E18800D91818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9429005421F6E18800D91818 /* HHContactsManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9429005621F6E18800D91818 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9429005F21F6E18800D91818 /* HHContactsManagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9429005121F6E18800D91818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9429003621F6E18500D91818 /* HHContactsManager */;
+			targetProxy = 9429005021F6E18800D91818 /* PBXContainerItemProxy */;
+		};
+		9429005C21F6E18800D91818 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9429003621F6E18500D91818 /* HHContactsManager */;
+			targetProxy = 9429005B21F6E18800D91818 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9429004021F6E18500D91818 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9429004121F6E18500D91818 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9429004521F6E18800D91818 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9429004621F6E18800D91818 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9429006121F6E18800D91818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9429006221F6E18800D91818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9429006421F6E18800D91818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F5C55A02D1977676091DEAD /* Pods-HHContactsManager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9429006521F6E18800D91818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CD83FF6D7CA0329C8647092 /* Pods-HHContactsManager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9429006721F6E18800D91818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710789A277DB6208C0572BD1 /* Pods-HHContactsManagerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = Debug;
+		};
+		9429006821F6E18800D91818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 305A0387C44D7C87CB93979E /* Pods-HHContactsManagerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = Release;
+		};
+		9429006A21F6E18800D91818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 408C1B6AB2C91E08F39E22BB /* Pods-HHContactsManagerUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = Debug;
+		};
+		9429006B21F6E18800D91818 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4168C00F330A182570046E6 /* Pods-HHContactsManagerUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = Release;
+		};
+		94BDA2D62202A7E400FE1E0F /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug-dev";
+		};
+		94BDA2D72202A7E400FE1E0F /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BD3F14C1961DE3D6CE5302 /* Pods-HHContactsManager.debug-dev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEV=1",
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-dev";
+		};
+		94BDA2D82202A7E400FE1E0F /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7D84754D9A84CC0F697E217 /* Pods-HHContactsManagerTests.debug-dev.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = "Debug-dev";
+		};
+		94BDA2D92202A7E400FE1E0F /* Debug-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C06A921968DB9B1D2A5775B /* Pods-HHContactsManagerUITests.debug-dev.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = "Debug-dev";
+		};
+		94BDA2DA2202A7F000FE1E0F /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-dev";
+		};
+		94BDA2DB2202A7F000FE1E0F /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32169CC0FDFE66618504E02C /* Pods-HHContactsManager.release-dev.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-dev";
+		};
+		94BDA2DC2202A7F000FE1E0F /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6FA7625BFC915B40641E94A3 /* Pods-HHContactsManagerTests.release-dev.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = "Release-dev";
+		};
+		94BDA2DD2202A7F000FE1E0F /* Release-dev */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9349AE031FA345960BE89768 /* Pods-HHContactsManagerUITests.release-dev.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = "Release-dev";
+		};
+		94BDA2DE2202A87500FE1E0F /* Debug-test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = "Debug-test";
+		};
+		94BDA2DF2202A87500FE1E0F /* Debug-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD6B0236644177B5F9AFA23B /* Pods-HHContactsManager.debug-test.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"TEST=1",
+				);
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-test";
+		};
+		94BDA2E02202A87500FE1E0F /* Debug-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20ECB2CD925138FABE088D6 /* Pods-HHContactsManagerTests.debug-test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = "Debug-test";
+		};
+		94BDA2E12202A87500FE1E0F /* Debug-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13121ADC22D95E8521BFFF80 /* Pods-HHContactsManagerUITests.debug-test.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = "Debug-test";
+		};
+		94BDA2E22202A88200FE1E0F /* Release-test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-test";
+		};
+		94BDA2E32202A88200FE1E0F /* Release-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55EE9C67AC0B626EDB8391A /* Pods-HHContactsManager.release-test.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release-test";
+		};
+		94BDA2E42202A88200FE1E0F /* Release-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4FC9752B41155A4738D5DD7 /* Pods-HHContactsManagerTests.release-test.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HHContactsManager.app/HHContactsManager";
+			};
+			name = "Release-test";
+		};
+		94BDA2E52202A88200FE1E0F /* Release-test */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B59F6E9063EF54FCFDEC992 /* Pods-HHContactsManagerUITests.release-test.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				INFOPLIST_FILE = HHContactsManagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHContactsManagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HHContactsManager;
+			};
+			name = "Release-test";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9429003221F6E18500D91818 /* Build configuration list for PBXProject "HHContactsManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9429006121F6E18800D91818 /* Debug */,
+				94BDA2DE2202A87500FE1E0F /* Debug-test */,
+				94BDA2D62202A7E400FE1E0F /* Debug-dev */,
+				9429006221F6E18800D91818 /* Release */,
+				94BDA2E22202A88200FE1E0F /* Release-test */,
+				94BDA2DA2202A7F000FE1E0F /* Release-dev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9429006321F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9429006421F6E18800D91818 /* Debug */,
+				94BDA2DF2202A87500FE1E0F /* Debug-test */,
+				94BDA2D72202A7E400FE1E0F /* Debug-dev */,
+				9429006521F6E18800D91818 /* Release */,
+				94BDA2E32202A88200FE1E0F /* Release-test */,
+				94BDA2DB2202A7F000FE1E0F /* Release-dev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9429006621F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9429006721F6E18800D91818 /* Debug */,
+				94BDA2E02202A87500FE1E0F /* Debug-test */,
+				94BDA2D82202A7E400FE1E0F /* Debug-dev */,
+				9429006821F6E18800D91818 /* Release */,
+				94BDA2E42202A88200FE1E0F /* Release-test */,
+				94BDA2DC2202A7F000FE1E0F /* Release-dev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9429006921F6E18800D91818 /* Build configuration list for PBXNativeTarget "HHContactsManagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9429006A21F6E18800D91818 /* Debug */,
+				94BDA2E12202A87500FE1E0F /* Debug-test */,
+				94BDA2D92202A7E400FE1E0F /* Debug-dev */,
+				9429006B21F6E18800D91818 /* Release */,
+				94BDA2E52202A88200FE1E0F /* Release-test */,
+				94BDA2DD2202A7F000FE1E0F /* Release-dev */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9429002F21F6E18500D91818 /* Project object */;
+}
