@@ -15,6 +15,7 @@
 		94BDA2B42202A1FD00FE1E0F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BDA2B32202A1FD00FE1E0F /* main.m */; };
 		94BDA2BE2202A1FD00FE1E0F /* HHAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BDA2BD2202A1FD00FE1E0F /* HHAnimationTests.m */; };
 		94BDA2C92202A1FD00FE1E0F /* HHAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BDA2C82202A1FD00FE1E0F /* HHAnimationUITests.m */; };
+		94F16F49220300F7008AC389 /* HHLanchScreenVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F16F48220300F7008AC389 /* HHLanchScreenVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		94BDA2C42202A1FD00FE1E0F /* HHAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BDA2C82202A1FD00FE1E0F /* HHAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAnimationUITests.m; sourceTree = "<group>"; };
 		94BDA2CA2202A1FD00FE1E0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94F16F47220300F7008AC389 /* HHLanchScreenVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHLanchScreenVC.h; sourceTree = "<group>"; };
+		94F16F48220300F7008AC389 /* HHLanchScreenVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHLanchScreenVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				94BDA2A52202A1FC00FE1E0F /* AppDelegate.m */,
 				94BDA2A72202A1FC00FE1E0F /* ViewController.h */,
 				94BDA2A82202A1FC00FE1E0F /* ViewController.m */,
+				94F16F47220300F7008AC389 /* HHLanchScreenVC.h */,
+				94F16F48220300F7008AC389 /* HHLanchScreenVC.m */,
 				94BDA2AA2202A1FC00FE1E0F /* Main.storyboard */,
 				94BDA2AD2202A1FD00FE1E0F /* Assets.xcassets */,
 				94BDA2AF2202A1FD00FE1E0F /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				94BDA2A92202A1FC00FE1E0F /* ViewController.m in Sources */,
 				94BDA2B42202A1FD00FE1E0F /* main.m in Sources */,
 				94BDA2A62202A1FC00FE1E0F /* AppDelegate.m in Sources */,
+				94F16F49220300F7008AC389 /* HHLanchScreenVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
