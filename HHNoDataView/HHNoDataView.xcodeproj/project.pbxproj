@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		945029BF224CCCAD00105FAE /* HHNoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 945029BE224CCCAD00105FAE /* HHNoDataView.m */; };
 		94BDA2682202A18700FE1E0F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BDA2672202A18700FE1E0F /* AppDelegate.m */; };
 		94BDA26B2202A18700FE1E0F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94BDA26A2202A18700FE1E0F /* ViewController.m */; };
 		94BDA26E2202A18700FE1E0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94BDA26C2202A18700FE1E0F /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		945029BD224CCCAD00105FAE /* HHNoDataView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHNoDataView.h; sourceTree = "<group>"; };
+		945029BE224CCCAD00105FAE /* HHNoDataView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHNoDataView.m; sourceTree = "<group>"; };
 		94BDA2632202A18700FE1E0F /* HHNoDataView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHNoDataView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94BDA2662202A18700FE1E0F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94BDA2672202A18700FE1E0F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				94BDA2672202A18700FE1E0F /* AppDelegate.m */,
 				94BDA2692202A18700FE1E0F /* ViewController.h */,
 				94BDA26A2202A18700FE1E0F /* ViewController.m */,
+				945029BD224CCCAD00105FAE /* HHNoDataView.h */,
+				945029BE224CCCAD00105FAE /* HHNoDataView.m */,
 				94BDA26C2202A18700FE1E0F /* Main.storyboard */,
 				94BDA26F2202A18800FE1E0F /* Assets.xcassets */,
 				94BDA2712202A18800FE1E0F /* LaunchScreen.storyboard */,
@@ -265,6 +270,7 @@
 				94BDA26B2202A18700FE1E0F /* ViewController.m in Sources */,
 				94BDA2762202A18800FE1E0F /* main.m in Sources */,
 				94BDA2682202A18700FE1E0F /* AppDelegate.m in Sources */,
+				945029BF224CCCAD00105FAE /* HHNoDataView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

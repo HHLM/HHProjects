@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "HHNoDataView.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[HHNoDataView shareNoDataView] showCenterView:self.view icon:@"" clicked:^{
+        NSLog(@"点我干啥~~~~");
+    }];;
 }
 
 
