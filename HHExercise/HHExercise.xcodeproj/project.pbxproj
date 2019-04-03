@@ -15,6 +15,13 @@
 		94502974224CA5F300105FAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502973224CA5F300105FAE /* main.m */; };
 		9450297E224CA5F300105FAE /* HHExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450297D224CA5F300105FAE /* HHExerciseTests.m */; };
 		94502989224CA5F300105FAE /* HHExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502988224CA5F300105FAE /* HHExerciseUITests.m */; };
+		94AD4990225457C80069E487 /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD498F225457C80069E487 /* HHBaseViewController.m */; };
+		94AD4993225457E80069E487 /* HHRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD4992225457E80069E487 /* HHRunLoopViewController.m */; };
+		94AD4996225457F90069E487 /* HHRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD4995225457F90069E487 /* HHRuntimeViewController.m */; };
+		94AD4999225458060069E487 /* HHKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD4998225458060069E487 /* HHKVOViewController.m */; };
+		94AD499C2254580F0069E487 /* HHKVCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD499B2254580F0069E487 /* HHKVCViewController.m */; };
+		94AD499F22545ADD0069E487 /* HHAutoLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD499E22545ADD0069E487 /* HHAutoLayoutViewController.m */; };
+		94AD49A8225480460069E487 /* HHThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD49A7225480460069E487 /* HHThread.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,22 @@
 		94502984224CA5F300105FAE /* HHExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94502988224CA5F300105FAE /* HHExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHExerciseUITests.m; sourceTree = "<group>"; };
 		9450298A224CA5F300105FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94AD498E225457C80069E487 /* HHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
+		94AD498F225457C80069E487 /* HHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
+		94AD4991225457E80069E487 /* HHRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRunLoopViewController.h; sourceTree = "<group>"; };
+		94AD4992225457E80069E487 /* HHRunLoopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRunLoopViewController.m; sourceTree = "<group>"; };
+		94AD4994225457F90069E487 /* HHRuntimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRuntimeViewController.h; sourceTree = "<group>"; };
+		94AD4995225457F90069E487 /* HHRuntimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRuntimeViewController.m; sourceTree = "<group>"; };
+		94AD4997225458060069E487 /* HHKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKVOViewController.h; sourceTree = "<group>"; };
+		94AD4998225458060069E487 /* HHKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHKVOViewController.m; sourceTree = "<group>"; };
+		94AD499A2254580F0069E487 /* HHKVCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKVCViewController.h; sourceTree = "<group>"; };
+		94AD499B2254580F0069E487 /* HHKVCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHKVCViewController.m; sourceTree = "<group>"; };
+		94AD499D22545ADD0069E487 /* HHAutoLayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHAutoLayoutViewController.h; sourceTree = "<group>"; };
+		94AD499E22545ADD0069E487 /* HHAutoLayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHAutoLayoutViewController.m; sourceTree = "<group>"; };
+		94AD49A022547A790069E487 /* RunLoop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = RunLoop.c; sourceTree = "<group>"; };
+		94AD49A222547F740069E487 /* CFRunLoop.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CFRunLoop.c; sourceTree = "<group>"; };
+		94AD49A6225480460069E487 /* HHThread.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHThread.h; sourceTree = "<group>"; };
+		94AD49A7225480460069E487 /* HHThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHThread.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +124,12 @@
 		94502963224CA5F200105FAE /* HHExercise */ = {
 			isa = PBXGroup;
 			children = (
-				94502964224CA5F200105FAE /* AppDelegate.h */,
-				94502965224CA5F200105FAE /* AppDelegate.m */,
-				94502967224CA5F200105FAE /* ViewController.h */,
-				94502968224CA5F200105FAE /* ViewController.m */,
-				9450296A224CA5F200105FAE /* Main.storyboard */,
-				9450296D224CA5F300105FAE /* Assets.xcassets */,
-				9450296F224CA5F300105FAE /* LaunchScreen.storyboard */,
-				94502972224CA5F300105FAE /* Info.plist */,
-				94502973224CA5F300105FAE /* main.m */,
+				94AD498C225456680069E487 /* AutoLayout */,
+				94AD498A2254562C0069E487 /* KVO&KVC */,
+				94AD49892254562C0069E487 /* RunLoop */,
+				94AD498B2254562C0069E487 /* RunTime */,
+				94AD4986225455CB0069E487 /* Other */,
+				94AD498D225456730069E487 /* Main */,
 			);
 			path = HHExercise;
 			sourceTree = "<group>";
@@ -130,6 +150,81 @@
 				9450298A224CA5F300105FAE /* Info.plist */,
 			);
 			path = HHExerciseUITests;
+			sourceTree = "<group>";
+		};
+		94AD4986225455CB0069E487 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				94502965224CA5F200105FAE /* AppDelegate.m */,
+				94502964224CA5F200105FAE /* AppDelegate.h */,
+				9450296A224CA5F200105FAE /* Main.storyboard */,
+				9450296D224CA5F300105FAE /* Assets.xcassets */,
+				9450296F224CA5F300105FAE /* LaunchScreen.storyboard */,
+				94502972224CA5F300105FAE /* Info.plist */,
+				94502973224CA5F300105FAE /* main.m */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		94AD49892254562C0069E487 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				94AD49A522547FB80069E487 /* Model */,
+				94AD49A222547F740069E487 /* CFRunLoop.c */,
+				94AD49A022547A790069E487 /* RunLoop.c */,
+				94AD4991225457E80069E487 /* HHRunLoopViewController.h */,
+				94AD4992225457E80069E487 /* HHRunLoopViewController.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
+		94AD498A2254562C0069E487 /* KVO&KVC */ = {
+			isa = PBXGroup;
+			children = (
+				94AD4997225458060069E487 /* HHKVOViewController.h */,
+				94AD4998225458060069E487 /* HHKVOViewController.m */,
+				94AD499A2254580F0069E487 /* HHKVCViewController.h */,
+				94AD499B2254580F0069E487 /* HHKVCViewController.m */,
+			);
+			path = "KVO&KVC";
+			sourceTree = "<group>";
+		};
+		94AD498B2254562C0069E487 /* RunTime */ = {
+			isa = PBXGroup;
+			children = (
+				94AD4994225457F90069E487 /* HHRuntimeViewController.h */,
+				94AD4995225457F90069E487 /* HHRuntimeViewController.m */,
+			);
+			path = RunTime;
+			sourceTree = "<group>";
+		};
+		94AD498C225456680069E487 /* AutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				94AD499D22545ADD0069E487 /* HHAutoLayoutViewController.h */,
+				94AD499E22545ADD0069E487 /* HHAutoLayoutViewController.m */,
+			);
+			path = AutoLayout;
+			sourceTree = "<group>";
+		};
+		94AD498D225456730069E487 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94502967224CA5F200105FAE /* ViewController.h */,
+				94502968224CA5F200105FAE /* ViewController.m */,
+				94AD498E225457C80069E487 /* HHBaseViewController.h */,
+				94AD498F225457C80069E487 /* HHBaseViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		94AD49A522547FB80069E487 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94AD49A6225480460069E487 /* HHThread.h */,
+				94AD49A7225480460069E487 /* HHThread.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +289,7 @@
 		94502959224CA5F100105FAE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HH;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "你在哪里呀";
 				TargetAttributes = {
@@ -263,8 +359,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				94502969224CA5F200105FAE /* ViewController.m in Sources */,
+				94AD49A8225480460069E487 /* HHThread.m in Sources */,
+				94AD4996225457F90069E487 /* HHRuntimeViewController.m in Sources */,
 				94502974224CA5F300105FAE /* main.m in Sources */,
+				94AD499C2254580F0069E487 /* HHKVCViewController.m in Sources */,
+				94AD4999225458060069E487 /* HHKVOViewController.m in Sources */,
+				94AD499F22545ADD0069E487 /* HHAutoLayoutViewController.m in Sources */,
 				94502966224CA5F200105FAE /* AppDelegate.m in Sources */,
+				94AD4993225457E80069E487 /* HHRunLoopViewController.m in Sources */,
+				94AD4990225457C80069E487 /* HHBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
