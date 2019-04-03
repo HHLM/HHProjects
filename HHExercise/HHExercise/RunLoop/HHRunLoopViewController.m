@@ -3,9 +3,10 @@
 //  HHExercise
 //
 //  Created by Now on 2019/4/3.
-//  Copyright © 2019 你在哪里呀. All rights reserved.
+//  Copyright © 2019 where are you. All rights reserved.
 
 //  RunLoop 好文章： https://www.jianshu.com/p/4994a99d9c06
+// http://weslyxl.coding.me/2018/03/18/2018/3/RunLoop%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%B0%E5%BA%94%E7%94%A8%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/
 
 #import "HHRunLoopViewController.h"
 #import "HHThread.h"
@@ -14,23 +15,72 @@
 @end
 
 @implementation HHRunLoopViewController
-
 /*
  RunLoop 就是一个运行循环，一般情况线程完成后就会停止，但是程序是不能这样的，
  当有交互或者定时器，请求时候就要执行的。
  接受消息-> 等待消息-> 处理消息 循环 ，一直到循环结束
  1、runloop和线程是一一对应的
- 2、
+ 2、自动释放池 原理是什么
+ 3、
+ 
+√————————————————————————————— 我是分割线 —————————————————————————————————√
 
- */
+runloop作用：
+1、保存程序的持续运行
+2、处理app各种时间（时钟、交互、PerformSelector）
+3、节省CPU资源、提高程序性能--（该做事做事，该休息休息）
+
+runloop休眠的原理：
+1、调用了内核API(mach_msg()),进入内核，有内核来将线程至于休眠
+2、有消息就唤醒线程，回到用户态，来处理消息
+ 
+√————————————————————————————— 我是分割线 —————————————————————————————————√
+ 
+ Run Loop Observer Activities
+    typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
+    kCFRunLoopEntry = (1UL << 0),
+    kCFRunLoopBeforeTimers = (1UL << 1),
+    kCFRunLoopBeforeSources = (1UL << 2),
+    kCFRunLoopBeforeWaiting = (1UL << 5),
+    kCFRunLoopAfterWaiting = (1UL << 6),
+    kCFRunLoopExit = (1UL << 7),
+    kCFRunLoopAllActivities = 0x0FFFFFFFU
+    };
+    或操作 值越小优先级越高
+ 0b 0000 0001
+ 0b 0000 0100
+ ————————————
+ 0b 0000 0101
+ 
+√————————————————————————————— 我是分割线 —————————————————————————————————√
+*/
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addThread];
+    NSLog(@"runloop:%@",[NSRunLoop currentRunLoop]);
+    [self addHHThread];
     [self addCFRunLoop];
-    
+    [self addPerformSelecter];
 }
-- (void)addThread {
+- (void)addPerformSelecter {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        NSRunLoop *currentRunLoop = [NSRunLoop currentRunLoop];
+        NSLog(@"sss-%@",currentRunLoop);
+        [currentRunLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
+        NSLog(@"sss-%@",currentRunLoop.currentMode);
+        [self performSelector:@selector(performMain) withObject:nil afterDelay:1];
+        //所以如果当前线程没有 RunLoop，则这个方法会失效。
+        [currentRunLoop run]; // CFRunLoopRun();用这个也可以
+        
+        
+    });
+}
+- (void)performMain {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSLog(@"sss-%s",__func__);
+    });
+}
+- (void)addHHThread {
     //当线程结束的时候 就结束了 不让线程结束
     HHThread *thread = [[HHThread alloc] initWithBlock:^{
         NSLog(@"Hello world");

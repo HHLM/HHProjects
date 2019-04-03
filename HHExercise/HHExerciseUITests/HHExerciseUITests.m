@@ -3,7 +3,7 @@
 //  HHExerciseUITests
 //
 //  Created by Now on 2019/3/28.
-//  Copyright © 2019 你在哪里呀. All rights reserved.
+//  Copyright © 2019 where are you. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

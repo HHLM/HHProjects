@@ -291,7 +291,7 @@
 			attributes = {
 				CLASSPREFIX = HH;
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = "你在哪里呀";
+				ORGANIZATIONNAME = "where are you";
 				TargetAttributes = {
 					94502960224CA5F200105FAE = {
 						CreatedOnToolsVersion = 10.1;
