@@ -14,6 +14,8 @@
 #import "HHTimer.h"
 @interface HHRunLoopViewController ()
 @property (nonatomic, assign) BOOL stop;
+@property (nonatomic, strong) HHThread *thread;
+@property (nonatomic, strong) UIImageView *imageView;
 @end
 
 @implementation HHRunLoopViewController
@@ -62,6 +64,16 @@ runloop休眠的原理：
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"runloop-------|%@",[NSRunLoop currentRunLoop]);
+    [self addObserver];
+    [self addHHThread];
+    [self addCFRunLoop];
+    [self addPerformSelecter];
+    
+    
+}
+- (void)addObserver {
     //添加观察者 监听runloop状态
     CFAllocatorRef allref = CFAllocatorGetDefault();
     
@@ -100,12 +112,6 @@ runloop休眠的原理：
      */
     CFRunLoopAddObserver(CFRunLoopGetCurrent(), ref, kCFRunLoopCommonModes);
     CFRelease(ref);
-    NSLog(@"runloop-------|%@",[NSRunLoop currentRunLoop]);
-    [self addHHThread];
-    [self addCFRunLoop];
-    [self addPerformSelecter];
-    
-    
 }
 - (void)addPerformSelecter {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
@@ -197,6 +203,19 @@ runloop休眠的原理：
     NSLog(@"-3-%s",__func__);
     self.stop = YES;
     [self addNSRunLoop];
+    [self performSelector:@selector(test) onThread:self.thread withObject:nil waitUntilDone:NO];
 }
-
+- (void)test {
+    NSLog(@"-----------------");
+}
+- (void)addImageView {
+    UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(100, 500, 100, 100)];
+    _imageView = imageView;
+    [self.view addSubview:imageView];
+}
+- (void)useImageView
+{
+    // 只在NSDefaultRunLoopMode模式下显示图片
+    [self.imageView performSelector:@selector(setImage:) withObject:[UIImage imageNamed:@"placeholder"] afterDelay:3.0 inModes:@[NSDefaultRunLoopMode]];
+}
 @end
