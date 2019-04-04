@@ -17,16 +17,35 @@
     return self;
 }
 - (void)setAge:(NSString *)age {
+    
     NSLog(@"%s--%@",__func__,age);
 }
 - (void)_setAge:(NSString *)age {
-     NSLog(@"%s--%@",__func__,age);
+    
+    NSLog(@"%s--%@",__func__,age);
 }
 - (void)setIsAge:(NSString *)age {
+    
     NSLog(@"%s--%@",__func__,age);
 }
 //是否直接访问成员变量 默认是YES
 + (BOOL)accessInstanceVariablesDirectly {
     return YES;
 }
+- (NSString *)getName {
+    NSLog(@"%s",__func__);
+    return @"name";
+}
+- (NSString *)name {
+    NSLog(@"%s",__func__);
+    return @"name";
+}
+//- (NSString *)getAge {
+//    NSLog(@"%s",__func__);
+//    return @"getAge";
+//}
+//- (NSString *)age {
+//    NSLog(@"%s",__func__);
+//    return @"age";
+//}
 @end

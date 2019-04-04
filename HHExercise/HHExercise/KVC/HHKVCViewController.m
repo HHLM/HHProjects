@@ -19,12 +19,19 @@
     [super viewDidLoad];
     //kvc 简洁访问属性
     HHKVCModel *model = [[HHKVCModel alloc] init];
-    [model setValue:@"HHHH" forKey:@"name"];
+    [model hh_setValue:@"HHHH" forKey:@"name"];
     NSLog(@"%@",[model valueForKey:@"name"]);
-    
-    [model hh_setValue:@"11" forKey:@"__age"];
-    NSLog(@"age = %@",model->age);
-//    NSLog(@"_age = %@",model->_age);
+     NSLog(@"%@",[model hh_valueForKey:@"name"]);
+    NSLog(@"%@",[model hh_valueForKey:@"_name"]);
+    NSLog(@"%@",[model hh_valueForKey:@"age"]);
+     [model hh_setValue:@"12" forKey:@"age"];
+     NSLog(@"age = %@",model.age);
+//
+    [model hh_setValue:@"12" forKey:@"__age"];
+//    [model hh_setValue:@"11" forKey:@"_age"];
+//    [model setValue:@"13" forKey:@"name"];
+    NSLog(@"name = %@",model->name);
+    NSLog(@"_age = %@",model.age);
     
 //    NSLog(@"isAge = %@",model->isAge);
 //    NSLog(@"_isAge = %@",model->isAge);

@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 {
     @public
     NSString *name;
-    NSString *age;
+//    NSString *age;
 //    NSString *_age;
 //    NSString *isAge;
 }
-//@property (nonatomic, copy) NSString *age;
+@property (nonatomic, copy) NSString *age;
 @end
 
 NS_ASSUME_NONNULL_END

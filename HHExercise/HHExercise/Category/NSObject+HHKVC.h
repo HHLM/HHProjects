@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NSObject (HHKVC)
 - (void)hh_setValue:(nullable id)value forKey:(NSString *)key;
+
+- (nullable id)hh_valueForKey:(NSString *)key;
 @end
 
 NS_ASSUME_NONNULL_END
