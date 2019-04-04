@@ -6,10 +6,12 @@
 //  Copyright © 2019 where are you. All rights reserved.
 
 //  RunLoop 好文章： https://www.jianshu.com/p/4994a99d9c06
+// RunLoop 更好文章：https://www.jianshu.com/p/288427b752eb?utm_campaign=hugo&utm_medium=reader_share&utm_content=note&utm_source=weixin-friends
 // http://weslyxl.coding.me/2018/03/18/2018/3/RunLoop%E4%BB%8E%E6%BA%90%E7%A0%81%E5%88%B0%E5%BA%94%E7%94%A8%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90/
 
 #import "HHRunLoopViewController.h"
 #import "HHThread.h"
+#import "HHTimer.h"
 @interface HHRunLoopViewController ()
 @property (nonatomic, assign) BOOL stop;
 @end
@@ -23,8 +25,11 @@
  2、自动释放池 原理是什么
  3、
  
+ ? 开发中用的runloop 苹果启动时候- 添加了观察者
+ 
 √————————————————————————————— 我是分割线 —————————————————————————————————√
 
+ 
 runloop作用：
 1、保存程序的持续运行
 2、处理app各种时间（时钟、交互、PerformSelector）
@@ -57,22 +62,60 @@ runloop休眠的原理：
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"runloop:%@",[NSRunLoop currentRunLoop]);
+    //添加观察者 监听runloop状态
+    CFAllocatorRef allref = CFAllocatorGetDefault();
+    
+    /**
+     @param observer  传入一个观察者，observer就是新创建的观察者
+     @param activities 监听的活动
+     @param repeats 是否重复
+     @param order 0
+     @param observer 观察者
+     @param activity 状态
+     @return block
+     */
+    
+    CFRunLoopObserverRef ref = CFRunLoopObserverCreateWithHandler(allref, kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+        
+        if (activity == kCFRunLoopAllActivities) {
+            NSLog(@"activtiy-----%@-------:%lu",@"kCFRunLoopAllActivities",activity);
+        }else if (activity == kCFRunLoopAfterWaiting) {
+            NSLog(@"监听到即将从睡眠中醒来---%@---%zd----%@",@"kCFRunLoopAfterWaiting",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }else if (activity == kCFRunLoopEntry) {
+            NSLog(@"监听到即将进入RunLoop---%@---%zd----%@",@"kCFRunLoopEntry",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }else if (activity == kCFRunLoopBeforeTimers) {
+            NSLog(@"监听到即将处理Timer---%@---%zd----%@",@"kCFRunLoopBeforeTimers",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }else if (activity == kCFRunLoopBeforeSources) {
+            NSLog(@"监听到即将处理Sources---%@---%zd----%@",@"kCFRunLoopBeforeSources",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }else if (activity == kCFRunLoopBeforeWaiting) {
+            NSLog(@"监听到即将进入睡眠---%@---%zd----%@",@"kCFRunLoopBeforeWaiting",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }else if (activity == kCFRunLoopExit) {
+            NSLog(@"监听到即将从退出RunLoop---%@---%zd----%@",@"kCFRunLoopExit",activity,[[NSRunLoop currentRunLoop] currentMode]);
+        }
+    });
+    /**
+     第一个：传入一个RunLoop，CFRunLoopGetCurrent()获取当前的RunLoop
+     第二个：传入一个观察者，observer就是新创建的观察者
+     第三个：传入Mode，kCFRunLoopCommonModes指定要监听的Mode
+     */
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), ref, kCFRunLoopCommonModes);
+    CFRelease(ref);
+    NSLog(@"runloop-------|%@",[NSRunLoop currentRunLoop]);
     [self addHHThread];
     [self addCFRunLoop];
     [self addPerformSelecter];
+    
+    
 }
 - (void)addPerformSelecter {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         NSRunLoop *currentRunLoop = [NSRunLoop currentRunLoop];
-        NSLog(@"sss-%@",currentRunLoop);
+//        NSLog(@"sss-%@",currentRunLoop);
         [currentRunLoop addPort:[NSMachPort port] forMode:NSDefaultRunLoopMode];
         NSLog(@"sss-%@",currentRunLoop.currentMode);
         [self performSelector:@selector(performMain) withObject:nil afterDelay:1];
         //所以如果当前线程没有 RunLoop，则这个方法会失效。
         [currentRunLoop run]; // CFRunLoopRun();用这个也可以
-        
-        
     });
 }
 - (void)performMain {
@@ -152,7 +195,7 @@ runloop休眠的原理：
  }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"-3-%s",__func__);
-//    self.stop = YES;
+    self.stop = YES;
     [self addNSRunLoop];
 }
 
