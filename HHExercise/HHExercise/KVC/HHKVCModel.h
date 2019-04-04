@@ -19,6 +19,20 @@ NS_ASSUME_NONNULL_BEGIN
 //    NSString *isAge;
 }
 @property (nonatomic, copy) NSString *age;
+
+@property (nonatomic, copy) NSString *sonName;
+
+@property (nonatomic, copy) NSString *dogName;
+
+@property (nonatomic, copy) NSString *nickName;
+
+
+@property (nonatomic, strong) NSArray *books;
+
+
+@property (nonatomic, strong) NSSet *bookSet;
+
+@property (nonatomic, assign) NSUInteger count;
 @end
 
 NS_ASSUME_NONNULL_END

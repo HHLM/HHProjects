@@ -40,6 +40,25 @@
     NSLog(@"%s",__func__);
     return @"name";
 }
+
+- (NSUInteger)countOfBookSet {
+  return   self.count;
+}
+
+- (NSEnumerator *)enumeratorOfBooks {
+    return [self.bookSet objectEnumerator];
+}
+
+- (id )memberOfBookSet:(id)object {
+    return [self.bookSet containsObject:object] ? object :  nil;
+}
+
+- (NSUInteger)countOfBooks {
+    return self.count;
+}
+- (id)objectInBooksAtIndex:(NSUInteger)index {
+    return [NSString stringWithFormat:@"books %ld",index];
+}
 //- (NSString *)getAge {
 //    NSLog(@"%s",__func__);
 //    return @"getAge";

@@ -104,7 +104,7 @@
 /**
  取值过程：
  
- 1. 先找相关方法  get<Key>, key
+ 1. 按照这个顺序查找相关方法  get<Key>，<key>，is<Key>，或者_<key>，
  
  2. 若没有相关方法 + (BOOL)accessInstanceVariablesDirectly，判断是否可以直接方法成员变量
  
@@ -122,6 +122,9 @@
     }
     
     NSString *Key = key.capitalizedString;
+    
+    
+    
     if ([self respondsToSelector:NSSelectorFromString(key)]) {
         NSLog(@"value:forkey:---%@",key);
       return   [self performSelector:NSSelectorFromString(key)];
@@ -130,6 +133,14 @@
     if ([self respondsToSelector:NSSelectorFromString([NSString stringWithFormat:@"get%@",Key])]) {
         NSLog(@"value:forkey:---%@",[NSString stringWithFormat:@"get%@",Key]);
        return  [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"get%@",Key])];
+    }
+    if ([self respondsToSelector:NSSelectorFromString([NSString stringWithFormat:@"is%@",Key])]) {
+        NSLog(@"value:forkey:---%@",[NSString stringWithFormat:@"is%@",Key]);
+        return  [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"is%@",Key])];
+    }
+    if ([self respondsToSelector:NSSelectorFromString([NSString stringWithFormat:@"_%@",key])]) {
+        NSLog(@"value:forkey:---%@",[NSString stringWithFormat:@"_%@",key]);
+        return  [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"_%@",key])];
     }
     if (![[self class] accessInstanceVariablesDirectly]) {
         NSException *exception = [NSException exceptionWithName:@"" reason:@"" userInfo:nil];
@@ -144,7 +155,7 @@
         NSString *keyName = [NSString stringWithUTF8String:ivarName];
         [array addObject:keyName];
     }
-    //继续找相关变量_<key> 、_is<Key> 、 <key> 、is<Key>
+    //继续顺序查找找相关变量 _<key> 、_is<Key> 、 <key> 、is<Key>
     for (int i = 0; i < count; i ++) {
         NSString *keyName = array[i];
         if ([keyName isEqualToString:[NSString stringWithFormat:@"_%@",key]]) {
