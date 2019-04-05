@@ -7,7 +7,7 @@
 //
 
 #import "HHKVOViewController.h"
-
+#import <objc/runtime.h>
 @interface HHKVOViewController ()
 
 @end
@@ -16,7 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    unsigned int ocunt = 0;
+    Ivar *ivars = class_copyIvarList(UITextField.class, &ocunt);
+    for (int i =0 ; i < ocunt; i ++) {
+        Ivar ivar = ivars[i];
+        const char *varName = ivar_getName(ivar);
+        NSString *keyName = [NSString stringWithUTF8String:varName];
+        NSLog(@"%@",keyName);
+    }
+    
 }
 
 /*

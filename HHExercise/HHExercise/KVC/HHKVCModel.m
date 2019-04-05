@@ -17,15 +17,15 @@
     return self;
 }
 - (void)setAge:(NSString *)age {
-    
+    _age = age; //self.age 才有值 要不然没有值
     NSLog(@"%s--%@",__func__,age);
 }
 - (void)_setAge:(NSString *)age {
-    
+    _age = age;
     NSLog(@"%s--%@",__func__,age);
 }
 - (void)setIsAge:(NSString *)age {
-    
+    _age = age;
     NSLog(@"%s--%@",__func__,age);
 }
 //是否直接访问成员变量 默认是YES
