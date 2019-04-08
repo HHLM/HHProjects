@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHRuntime : HHRuntimeModel
+@property (nonatomic, assign) NSInteger age;
 - (void)study;
 @end
 

@@ -11,13 +11,33 @@
 @implementation HHRuntime
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     NSLog(@"%s",__func__);
-    return [super resolveInstanceMethod:sel];
+    BOOL resolve = [super resolveInstanceMethod:sel];
+    /**
+     resolve 为 YES继续执行
+     若为NO的时候调用 forwardingTargetForSelector:方法
+     */
+    return resolve;
 }
 - (id)forwardingTargetForSelector:(SEL)aSelector {
     NSLog(@"%s",__func__);
-    return [super forwardingTargetForSelector:aSelector];
+    id forward = [super forwardingTargetForSelector:aSelector];
+    if (forward == nil) {
+        //执行 methodSignatureForSelector: 方法
+    }
+    return forward;
+}
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
+    NSLog(@"%s",__func__);
+    NSMethodSignature *methodSigna = [super methodSignatureForSelector:aSelector];
+    if (methodSigna == nil) {
+        //就结束崩溃
+    }
+    return methodSigna;
 }
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
+    SEL sel = anInvocation.selector;
+    [anInvocation invokeWithTarget:self];
     NSLog(@"%s",__func__);
     [super forwardInvocation:anInvocation];
 }

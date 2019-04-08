@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *work;
 - (void)walk;
 + (void)sleep;
+- (void)study;
 @end
 
 NS_ASSUME_NONNULL_END
