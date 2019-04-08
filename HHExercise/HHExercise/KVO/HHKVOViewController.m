@@ -17,14 +17,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    unsigned int ocunt = 0;
-    Ivar *ivars = class_copyIvarList(UITextField.class, &ocunt);
-    for (int i =0 ; i < ocunt; i ++) {
+    unsigned int count = 0;
+    Ivar *ivars = class_copyIvarList(UITextField.class, &count);
+    for (int i =0 ; i < count; i ++) {
         Ivar ivar = ivars[i];
         const char *varName = ivar_getName(ivar);
         NSString *keyName = [NSString stringWithUTF8String:varName];
         NSLog(@"%@",keyName);
     }
+    
+//    Ivar *ivarp = class_copyPropertyList([UITextField class], &count);
+//    for (int i = 0; i < count; i ++) {
+//        Ivar ivar = ivarp[i];
+//        const char *varName = ivar_getName(ivar);
+//        NSString *keyName = [NSString stringWithUTF8String:varName];
+//        NSLog(@"---------%@",keyName);
+//    }
     
 }
 
