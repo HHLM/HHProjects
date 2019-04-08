@@ -39,10 +39,10 @@
     
     NSLog(@"%s",__func__);
 #if 1
-    
+    return  [super resolveInstanceMethod:sel];
 #else
     if (sel  == @selector(study)) {
-        //消息转发
+        //方法动态绑定
         Method method = class_getInstanceMethod(self, @selector(walk));
         IMP imp = method_getImplementation(method);
         const char* types = method_getTypeEncoding(method);
@@ -50,7 +50,7 @@
         return class_addMethod(self , sel, imp, types);
     }
 #endif
-    return  [super resolveInstanceMethod:sel];
+   
 }
 + (BOOL)resolveClassMethod:(SEL)sel {
     NSLog(@"%s",__func__);
