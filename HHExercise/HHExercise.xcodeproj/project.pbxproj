@@ -68,6 +68,7 @@
 		94780AD4225ADC0600A72A0C /* HHRuntimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRuntimeModel.m; sourceTree = "<group>"; };
 		94780AEA225B216400A72A0C /* HHRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRuntime.h; sourceTree = "<group>"; };
 		94780AEB225B216400A72A0C /* HHRuntime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRuntime.m; sourceTree = "<group>"; };
+		94780AED225B6C2F00A72A0C /* RuntimeAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeAPI.h; sourceTree = "<group>"; };
 		948753EC2255A3A700DB81B1 /* HHTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHTimer.h; sourceTree = "<group>"; };
 		948753ED2255A3A700DB81B1 /* HHTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHTimer.m; sourceTree = "<group>"; };
 		948753EF2255B3ED00DB81B1 /* HHKVCModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHKVCModel.h; sourceTree = "<group>"; };
@@ -179,6 +180,7 @@
 				94780AD4225ADC0600A72A0C /* HHRuntimeModel.m */,
 				94780AEA225B216400A72A0C /* HHRuntime.h */,
 				94780AEB225B216400A72A0C /* HHRuntime.m */,
+				94780AED225B6C2F00A72A0C /* RuntimeAPI.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";

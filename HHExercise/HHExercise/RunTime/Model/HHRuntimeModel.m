@@ -4,6 +4,11 @@
 //
 //  Created by Now on 2019/4/8.
 //  Copyright © 2019 where are you. All rights reserved.
+/*  runtime 文章：
+    https://www.cnblogs.com/ioshe/p/5489086.html
+    https://www.toutiao.com/i6225720353860092417/
+    https://www.jianshu.com/p/45db86af7b60
+ */
 //
 
 #import "HHRuntimeModel.h"
@@ -25,7 +30,7 @@
     NSLog(@"--%s--",__func__);
 }
 /**
- 找不到调用函数时候 第一次掉用 resolveInstanceMethod 动态绑定函数，动态绑定优先于消息转发。若没有进行动态绑定才会进行消息转发，消息转发时候会再次调用
+ 找不到调用函数时候 第一次掉用 resolveInstanceMethod 动态方法解析，动态方法解析优先于消息转发。若没有进行动态绑定才会进行消息转发，消息转发时候会再次调用
  第一步：调用函数 resolveInstanceMethod:sel （给个机会去提供函数的实现 ） 若返回为NO 执行第二步
     -| 动态绑定新的函数
  第二步：调用函数 forwardingTargetForSelector:aSelector 若返回为nil 执行第三步
