@@ -12,10 +12,10 @@
 #import <objc/runtime.h>
 #import "HHRuntime+HHExt.h"
 // 数据库中常见的几种类型
-#define SQL_TEXT     @"TEXT" //文本
+#define SQL_TEXT     @"TEXT"    //文本
+#define SQL_REAL     @"REAL"    //浮点
+#define SQL_BLOB     @"BLOB"    //data
 #define SQL_INTEGER  @"INTEGER" //int long integer ...
-#define SQL_REAL     @"REAL" //浮点
-#define SQL_BLOB     @"BLOB" //data
 
 @interface HHRuntimeViewController ()<HHRuntimeModelDelegate>
 

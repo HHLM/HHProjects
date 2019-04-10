@@ -22,6 +22,8 @@
 		948753F12255B3ED00DB81B1 /* HHKVCModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 948753F02255B3ED00DB81B1 /* HHKVCModel.m */; };
 		948753F42255B3F900DB81B1 /* HHKVOModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 948753F32255B3F900DB81B1 /* HHKVOModel.m */; };
 		948753FA2255BDF500DB81B1 /* NSObject+HHKVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 948753F92255BDF500DB81B1 /* NSObject+HHKVC.m */; };
+		949D7C04225DE3C500167A76 /* UIControl+HHExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 949D7C03225DE3C500167A76 /* UIControl+HHExt.m */; };
+		949D7C07225DE79D00167A76 /* NSArray+HHExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 949D7C06225DE79D00167A76 /* NSArray+HHExt.m */; };
 		94AD4990225457C80069E487 /* HHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD498F225457C80069E487 /* HHBaseViewController.m */; };
 		94AD4993225457E80069E487 /* HHRunLoopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD4992225457E80069E487 /* HHRunLoopViewController.m */; };
 		94AD4996225457F90069E487 /* HHRuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94AD4995225457F90069E487 /* HHRuntimeViewController.m */; };
@@ -80,6 +82,10 @@
 		948753F32255B3F900DB81B1 /* HHKVOModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHKVOModel.m; sourceTree = "<group>"; };
 		948753F82255BDF500DB81B1 /* NSObject+HHKVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HHKVC.h"; sourceTree = "<group>"; };
 		948753F92255BDF500DB81B1 /* NSObject+HHKVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HHKVC.m"; sourceTree = "<group>"; };
+		949D7C02225DE3C500167A76 /* UIControl+HHExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+HHExt.h"; sourceTree = "<group>"; };
+		949D7C03225DE3C500167A76 /* UIControl+HHExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+HHExt.m"; sourceTree = "<group>"; };
+		949D7C05225DE79D00167A76 /* NSArray+HHExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+HHExt.h"; sourceTree = "<group>"; };
+		949D7C06225DE79D00167A76 /* NSArray+HHExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HHExt.m"; sourceTree = "<group>"; };
 		94AD498E225457C80069E487 /* HHBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHBaseViewController.h; sourceTree = "<group>"; };
 		94AD498F225457C80069E487 /* HHBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHBaseViewController.m; sourceTree = "<group>"; };
 		94AD4991225457E80069E487 /* HHRunLoopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRunLoopViewController.h; sourceTree = "<group>"; };
@@ -185,6 +191,10 @@
 				94780AEB225B216400A72A0C /* HHRuntime.m */,
 				9463A7F4225D79AC00CF942B /* HHRuntime+HHExt.h */,
 				9463A7F5225D79AC00CF942B /* HHRuntime+HHExt.m */,
+				949D7C02225DE3C500167A76 /* UIControl+HHExt.h */,
+				949D7C03225DE3C500167A76 /* UIControl+HHExt.m */,
+				949D7C05225DE79D00167A76 /* NSArray+HHExt.h */,
+				949D7C06225DE79D00167A76 /* NSArray+HHExt.m */,
 				94780AED225B6C2F00A72A0C /* RuntimeAPI.h */,
 			);
 			path = Model;
@@ -420,8 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				948753F12255B3ED00DB81B1 /* HHKVCModel.m in Sources */,
+				949D7C07225DE79D00167A76 /* NSArray+HHExt.m in Sources */,
 				94780AD5225ADC0600A72A0C /* HHRuntimeModel.m in Sources */,
 				948753EE2255A3A700DB81B1 /* HHTimer.m in Sources */,
+				949D7C04225DE3C500167A76 /* UIControl+HHExt.m in Sources */,
 				94502969224CA5F200105FAE /* ViewController.m in Sources */,
 				94AD49A8225480460069E487 /* HHThread.m in Sources */,
 				948753F42255B3F900DB81B1 /* HHKVOModel.m in Sources */,
