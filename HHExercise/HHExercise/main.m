@@ -28,7 +28,7 @@ int main(int argc, char * argv[]) {
         
         objc_msgSend(objc_getClass("HHRuntimeModel"), @selector(sleep));
         objc_msgSend(run.class, @selector(sleep));
-        return 0;
+//        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

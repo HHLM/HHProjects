@@ -15,6 +15,7 @@
 		94502974224CA5F300105FAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502973224CA5F300105FAE /* main.m */; };
 		9450297E224CA5F300105FAE /* HHExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9450297D224CA5F300105FAE /* HHExerciseTests.m */; };
 		94502989224CA5F300105FAE /* HHExerciseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502988224CA5F300105FAE /* HHExerciseUITests.m */; };
+		9463A7F6225D79AC00CF942B /* HHRuntime+HHExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9463A7F5225D79AC00CF942B /* HHRuntime+HHExt.m */; };
 		94780AD5225ADC0600A72A0C /* HHRuntimeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 94780AD4225ADC0600A72A0C /* HHRuntimeModel.m */; };
 		94780AEC225B216400A72A0C /* HHRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 94780AEB225B216400A72A0C /* HHRuntime.m */; };
 		948753EE2255A3A700DB81B1 /* HHTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 948753ED2255A3A700DB81B1 /* HHTimer.m */; };
@@ -64,6 +65,8 @@
 		94502984224CA5F300105FAE /* HHExerciseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HHExerciseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94502988224CA5F300105FAE /* HHExerciseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHExerciseUITests.m; sourceTree = "<group>"; };
 		9450298A224CA5F300105FAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9463A7F4225D79AC00CF942B /* HHRuntime+HHExt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HHRuntime+HHExt.h"; sourceTree = "<group>"; };
+		9463A7F5225D79AC00CF942B /* HHRuntime+HHExt.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "HHRuntime+HHExt.m"; sourceTree = "<group>"; };
 		94780AD3225ADC0600A72A0C /* HHRuntimeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRuntimeModel.h; sourceTree = "<group>"; };
 		94780AD4225ADC0600A72A0C /* HHRuntimeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHRuntimeModel.m; sourceTree = "<group>"; };
 		94780AEA225B216400A72A0C /* HHRuntime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHRuntime.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				94780AD4225ADC0600A72A0C /* HHRuntimeModel.m */,
 				94780AEA225B216400A72A0C /* HHRuntime.h */,
 				94780AEB225B216400A72A0C /* HHRuntime.m */,
+				9463A7F4225D79AC00CF942B /* HHRuntime+HHExt.h */,
+				9463A7F5225D79AC00CF942B /* HHRuntime+HHExt.m */,
 				94780AED225B6C2F00A72A0C /* RuntimeAPI.h */,
 			);
 			path = Model;
@@ -426,6 +431,7 @@
 				948753FA2255BDF500DB81B1 /* NSObject+HHKVC.m in Sources */,
 				94780AEC225B216400A72A0C /* HHRuntime.m in Sources */,
 				94AD4999225458060069E487 /* HHKVOViewController.m in Sources */,
+				9463A7F6225D79AC00CF942B /* HHRuntime+HHExt.m in Sources */,
 				94AD499F22545ADD0069E487 /* HHAutoLayoutViewController.m in Sources */,
 				94502966224CA5F200105FAE /* AppDelegate.m in Sources */,
 				94AD4993225457E80069E487 /* HHRunLoopViewController.m in Sources */,

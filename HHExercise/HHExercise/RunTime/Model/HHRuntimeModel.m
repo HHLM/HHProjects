@@ -17,6 +17,40 @@
 
 @implementation HHRuntimeModel
 
+- (void)todoSomething:(NSString *)something,... {
+    va_list list;
+   
+    /**  va_start(ap, param) 初始化 一个ap*/
+   
+    va_start(list, something);
+    
+    NSMutableArray *array = [NSMutableArray array];
+   
+    id objc = something; //第一个参数
+    
+    [array addObject:objc];
+    
+    //va_arg(ap, type) ap是下一个参数 type是参数类型
+    while ((objc = va_arg(list, id))) {
+        [array addObject:objc];
+    }
+    
+    NSLog(@"array:%@",array);
+    
+    va_end(list);
+    //va_end(ap) 被调用后 ap变成undefined
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        if (self.delegate && [self.delegate respondsToSelector:@selector(runtimeShowMethod)]) {
+            [self.delegate runtimeShowMethod];
+        }
+    }
+    return self;
+}
 - (void)walk {
     NSLog(@"--%s--",__func__);
 }

@@ -10,6 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+
+@protocol HHRuntimeModelDelegate <NSObject>
+
+- runtimeShowMethod;
+
+@end
+
 @interface HHRuntimeModel : NSObject
 {
 @private
@@ -18,9 +25,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) BOOL sex;
 @property (nonatomic, copy) NSString *work;
+@property (nonatomic, weak) id <HHRuntimeModelDelegate>delegate;
 - (void)walk;
 + (void)sleep;
 - (void)study;
+- (void)todoSomething:(NSString *)something,...;
 @end
 
 NS_ASSUME_NONNULL_END
