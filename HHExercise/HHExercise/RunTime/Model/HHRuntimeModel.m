@@ -25,6 +25,8 @@
     va_start(list, something);
     
     NSMutableArray *array = [NSMutableArray array];
+    
+    NSString *where = something?[[NSString alloc] initWithFormat:something locale:[NSLocale currentLocale] arguments:list]:something;
    
     id objc = something; //第一个参数
     

@@ -10,6 +10,13 @@
 #import "HHRuntimeModel.h"
 #import "HHRuntime.h"
 #import <objc/runtime.h>
+#import "HHRuntime+HHExt.h"
+// 数据库中常见的几种类型
+#define SQL_TEXT     @"TEXT" //文本
+#define SQL_INTEGER  @"INTEGER" //int long integer ...
+#define SQL_REAL     @"REAL" //浮点
+#define SQL_BLOB     @"BLOB" //data
+
 @interface HHRuntimeViewController ()<HHRuntimeModelDelegate>
 
 @end
@@ -18,7 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self hh_getVarsList];
+}
+- (void)hh_getVarsList {
     HHRuntimeModel *model = [HHRuntimeModel new];
+    HHRuntime *run = [[HHRuntime alloc] init];
+    run.talent = @"hhhh";
+    NSLog(@"%@",run.talent);
     model.delegate = self;
     [model todoSomething:@"eat foot",@"sleep",@"hit dou dou",nil];
     unsigned int count = 0;
@@ -32,7 +45,24 @@
     }
     free(ivars);
     NSLog(@"------------------------分割线 成员变量-----------------------------");
+}
+- (void)hh_getMethodList {
+     HHRuntimeModel *model = [HHRuntimeModel new];
+    /** 方法 */
+    unsigned int count = 0;
+    Method *methods = class_copyMethodList([model class], &count);
+    for (int i = 0; i < count; i ++) {
+        Method method = methods[i];
+        NSString *keyName = NSStringFromSelector(method_getName(method));
+        NSLog(@"copyMethodName : %@",keyName);
+    }
+    free(methods);
+    NSLog(@"------------------------分割线 方法列表----------------------------");
+}
+- (void)hh_getProperyList {
     /** 属性 */
+    HHRuntimeModel *model = [HHRuntimeModel new];
+    unsigned int count = 0;
     objc_property_t *propertys = class_copyPropertyList([model class], &count);
     for (int i = 0;i < count ; i ++) {
         
@@ -44,20 +74,15 @@
         
         /** property_getAttributes 函数挖掘属性的真实名称和 @encode 类型，返回 C字符串 */
         const char *varAttributesName = property_getAttributes(property);
-        NSString *attributes = [NSString stringWithUTF8String:varAttributesName];;
+        NSString *attributes = [NSString stringWithUTF8String:varAttributesName];
+        [self propertTypeConvert:attributes];
         NSLog(@"attributes : %@",attributes);
     }
     free(propertys);
     NSLog(@"------------------------属性列表-------------------------------");
-    /** 方法 */
-    Method *methods = class_copyMethodList([model class], &count);
-    for (int i = 0; i < count; i ++) {
-        Method method = methods[i];
-        NSString *keyName = NSStringFromSelector(method_getName(method));
-        NSLog(@"copyMethodName : %@",keyName);
-    }
-    free(methods);
-    NSLog(@"------------------------分割线 方法列表----------------------------");
+}
+- (void)hh_getProtocolList {
+    unsigned int count = 0;
     __unsafe_unretained  Protocol **protocols =  class_copyProtocolList([self class], &count);
     NSLog(@"%u",count);
     for (int i = 0; i < count; i ++) {
@@ -68,18 +93,48 @@
     }
     free(protocols);
     NSLog(@"------------------------分割线 协议列表-----------------------------");
-    NSLog(@"------------------------ class_getName(model.class)：%s -------------------------------",class_getName(model.class));
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)propertTypeConvert:(NSString *)typeStr {
+    NSString *resultStr = nil;
+    if ([typeStr hasPrefix:@"T@\"NSString\""]) {
+        resultStr = SQL_TEXT;
+    } else if ([typeStr hasPrefix:@"T@\"NSData\""]) {
+        resultStr = SQL_BLOB;
+    } else if ([typeStr hasPrefix:@"Ti"]||
+               [typeStr hasPrefix:@"TI"]||
+               [typeStr hasPrefix:@"Ts"]||
+               [typeStr hasPrefix:@"TS"]||
+               [typeStr hasPrefix:@"TB"]||
+               [typeStr hasPrefix:@"Tq"]||
+               [typeStr hasPrefix:@"TQ"]||
+               [typeStr hasPrefix:@"T@\"NSNumber\""]) {
+        resultStr = SQL_INTEGER;
+    } else if ([typeStr hasPrefix:@"Tf"] ||
+               [typeStr hasPrefix:@"Td"]) {
+        resultStr= SQL_REAL;
+    }
+    NSLog(@"%@",resultStr);
+    return resultStr;
 }
-*/
-
+- (void)hh_encode {
+    NSLog(@"int        : %s", @encode(int));
+    NSLog(@"float      : %s", @encode(float));
+    NSLog(@"float *    : %s", @encode(float*));
+    NSLog(@"char       : %s", @encode(char));
+    NSLog(@"char *     : %s", @encode(char *));
+    NSLog(@"BOOL       : %s", @encode(BOOL));
+    NSLog(@"NSNumber   : %s", @encode(NSNumber*));
+    NSLog(@"void       : %s", @encode(void));
+    NSLog(@"void *     : %s", @encode(void *));
+    NSLog(@"NSString   : %s", @encode(NSString*));
+    NSLog(@"NSArray    : %s", @encode(NSArray*));
+    NSLog(@"NSObject * : %s", @encode(NSObject *));
+    NSLog(@"NSObject   : %s", @encode(NSObject));
+    NSLog(@"[NSObject] : %s", @encode(typeof([NSObject class])));
+    NSLog(@"NSError ** : %s", @encode(typeof(NSError **)));
+    NSLog(@"NSDictionary    : %s", @encode(NSDictionary*));
+}
+- (void)runtimeShowMethod {
+    
+}
 @end

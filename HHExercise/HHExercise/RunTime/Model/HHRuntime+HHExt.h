@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHRuntime (HHExt)
 
-@property (nonatomic, strong) NSString *talent;
+@property (nonatomic, copy) NSString *talent;
 
 @end
 

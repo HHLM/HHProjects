@@ -10,12 +10,14 @@
 #import <objc/runtime.h>
 @implementation HHRuntime (HHExt)
 
+static const char *name = "HHRuntime_add_protory";
 /** 添加成员变量 */
 - (void)setTalent:(NSString *)talent {
-    objc_setAssociatedObject(self, @selector(setTalent:), @"HHH",  OBJC_ASSOCIATION_COPY_NONATOMIC);
+   
+    objc_setAssociatedObject(self, @selector(setTalent:), talent,  OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (NSString *)talent {
-    return objc_getAssociatedObject(self, @selector(talent));
+    return objc_getAssociatedObject(self, @selector(setTalent:));
 }
 @end
