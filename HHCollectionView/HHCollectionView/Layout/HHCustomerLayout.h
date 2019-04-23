@@ -11,7 +11,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HHCustomerLayout : UICollectionViewLayout
-
+/** cell大小 */
+@property (nonatomic, assign) CGSize itemSize;
+/** 行间距 */
+@property (nonatomic, assign) CGFloat lineSpacing;
+/** 左右间距 */
+@property (nonatomic, assign) CGFloat interitemSpacing ;
+/** 偏移 */
+@property (nonatomic, assign) UIEdgeInsets contentInset;
 @end
 
 NS_ASSUME_NONNULL_END

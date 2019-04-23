@@ -9,5 +9,8 @@
 #import "HHCustomerLayout.h"
 
 @implementation HHCustomerLayout
-
+/** 布局cell */
+- (void)prepareLayout {
+    [super prepareLayout];
+}
 @end

@@ -1,5 +1,5 @@
 //
-//  HHCollectionViewCell.h
+//  HHCollectionViewFlowLayout.h
 //  HHCollectionView
 //
 //  Created by Now on 2019/4/20.
@@ -10,9 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HHCollectionViewCell : UICollectionViewCell
-
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@interface HHCollectionViewFlowLayout : UICollectionViewFlowLayout
 
 @end
 
