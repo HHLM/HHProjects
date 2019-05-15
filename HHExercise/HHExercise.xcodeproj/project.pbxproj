@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94385ED42272B21000638B6F /* HHMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 94385ED32272B21000638B6F /* HHMethod.m */; };
 		94502966224CA5F200105FAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502965224CA5F200105FAE /* AppDelegate.m */; };
 		94502969224CA5F200105FAE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94502968224CA5F200105FAE /* ViewController.m */; };
 		9450296C224CA5F200105FAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9450296A224CA5F200105FAE /* Main.storyboard */; };
@@ -51,6 +52,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		94385ED02272AA4900638B6F /* Runtime.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Runtime.md; sourceTree = "<group>"; };
+		94385ED22272B21000638B6F /* HHMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HHMethod.h; sourceTree = "<group>"; };
+		94385ED32272B21000638B6F /* HHMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HHMethod.m; sourceTree = "<group>"; };
 		94502961224CA5F200105FAE /* HHExercise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHExercise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94502964224CA5F200105FAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94502965224CA5F200105FAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -263,6 +267,9 @@
 				94780AD2225ADBE500A72A0C /* Model */,
 				94AD4994225457F90069E487 /* HHRuntimeViewController.h */,
 				94AD4995225457F90069E487 /* HHRuntimeViewController.m */,
+				94385ED02272AA4900638B6F /* Runtime.md */,
+				94385ED22272B21000638B6F /* HHMethod.h */,
+				94385ED32272B21000638B6F /* HHMethod.m */,
 			);
 			path = RunTime;
 			sourceTree = "<group>";
@@ -431,6 +438,7 @@
 			files = (
 				948753F12255B3ED00DB81B1 /* HHKVCModel.m in Sources */,
 				949D7C07225DE79D00167A76 /* NSArray+HHExt.m in Sources */,
+				94385ED42272B21000638B6F /* HHMethod.m in Sources */,
 				94780AD5225ADC0600A72A0C /* HHRuntimeModel.m in Sources */,
 				948753EE2255A3A700DB81B1 /* HHTimer.m in Sources */,
 				949D7C04225DE3C500167A76 /* UIControl+HHExt.m in Sources */,

@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 #import "HHRuntime.h"
 #import <objc/message.h>
+#import "HHMethod.h"
 
 extern void instrumentObjcMessageSends(BOOL);
 
@@ -28,7 +29,10 @@ int main(int argc, char * argv[]) {
         
         objc_msgSend(objc_getClass("HHRuntimeModel"), @selector(sleep));
         objc_msgSend(run.class, @selector(sleep));
-//        return 0;
+        
+        HHMethod *method = [[HHMethod alloc] init];
+        
+        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
