@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HHPlayToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="126"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRx-yZ-FIR">
+                    <rect key="frame" x="189" y="76" width="40" height="40"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wRx-yZ-FIR" secondAttribute="height" id="52V-wX-ZqG"/>
+                        <constraint firstAttribute="width" constant="40" id="ABH-Ia-p6T"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="播放"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ho-1C-sK9">
+                    <rect key="frame" x="40" y="81" width="30" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="87j-l2-xiJ"/>
+                        <constraint firstAttribute="width" secondItem="1ho-1C-sK9" secondAttribute="height" multiplier="1:1" id="rrJ-t1-7t6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="上"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tA-aI-2d5">
+                    <rect key="frame" x="348" y="81" width="30" height="30"/>
+                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Sjn-Ic-8RT"/>
+                        <constraint firstAttribute="width" secondItem="0tA-aI-2d5" secondAttribute="height" id="dI6-QV-yVb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="下"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnV-ke-iro">
+                    <rect key="frame" x="15" y="15" width="42" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="wc2-ur-gmr"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbT-Ve-pok">
+                    <rect key="frame" x="361" y="15" width="42" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="WJA-Ha-1nT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kgb-GD-12a">
+                    <rect key="frame" x="70" y="22" width="278" height="2"/>
+                </progressView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="nbT-Ve-pok" secondAttribute="trailing" constant="15" id="3si-yE-sOK"/>
+                <constraint firstAttribute="bottom" secondItem="wRx-yZ-FIR" secondAttribute="bottom" constant="10" id="7Sb-kp-dbe"/>
+                <constraint firstItem="wRx-yZ-FIR" firstAttribute="centerY" secondItem="1ho-1C-sK9" secondAttribute="centerY" id="BoK-U6-lrZ"/>
+                <constraint firstItem="HnV-ke-iro" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Ilg-28-6xT"/>
+                <constraint firstItem="0tA-aI-2d5" firstAttribute="centerY" secondItem="1ho-1C-sK9" secondAttribute="centerY" id="KJ5-Ag-jRd"/>
+                <constraint firstItem="nbT-Ve-pok" firstAttribute="centerY" secondItem="HnV-ke-iro" secondAttribute="centerY" id="Kem-pf-a7U"/>
+                <constraint firstAttribute="trailing" secondItem="0tA-aI-2d5" secondAttribute="trailing" constant="40" id="OdM-Ph-JaG"/>
+                <constraint firstItem="kgb-GD-12a" firstAttribute="centerY" secondItem="HnV-ke-iro" secondAttribute="centerY" id="QFC-Fs-8Du"/>
+                <constraint firstItem="HnV-ke-iro" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="cff-3W-y3d"/>
+                <constraint firstItem="kgb-GD-12a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="70" id="fog-4d-xQd"/>
+                <constraint firstAttribute="trailing" secondItem="kgb-GD-12a" secondAttribute="trailing" constant="70" id="ie3-oR-628"/>
+                <constraint firstItem="1ho-1C-sK9" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="pgR-05-FPx"/>
+                <constraint firstItem="nbT-Ve-pok" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="qmr-T0-2kq"/>
+                <constraint firstItem="wRx-yZ-FIR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="y8a-Ua-tft"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="allLab" destination="nbT-Ve-pok" id="xts-Sx-SPf"/>
+                <outlet property="currentLab" destination="HnV-ke-iro" id="Woe-17-MO1"/>
+                <outlet property="lastBtn" destination="1ho-1C-sK9" id="QxP-8E-WDQ"/>
+                <outlet property="nextBtn" destination="0tA-aI-2d5" id="5yr-u9-8fS"/>
+                <outlet property="playBtn" destination="wRx-yZ-FIR" id="TeM-j2-xmU"/>
+                <outlet property="progressview" destination="kgb-GD-12a" id="nOZ-OW-vre"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="-134"/>
+        </view>
+    </objects>
+</document>
