@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940E06B4228EFDEF00862DE5 /* UIView+ZZExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E06B2228EFDEF00862DE5 /* UIView+ZZExt.m */; };
+		940E06BB228FB53600862DE5 /* NSObject+YYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E06B8228FB53600862DE5 /* NSObject+YYModel.m */; };
+		940E06BC228FB53600862DE5 /* YYClassInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E06B9228FB53600862DE5 /* YYClassInfo.m */; };
 		948EAA87228EA74400E5F7C1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 948EAA86228EA74400E5F7C1 /* AppDelegate.m */; };
 		948EAA8A228EA74400E5F7C1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 948EAA89228EA74400E5F7C1 /* ViewController.m */; };
 		948EAA8D228EA74400E5F7C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948EAA8B228EA74400E5F7C1 /* Main.storyboard */; };
@@ -21,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		940E06B2228EFDEF00862DE5 /* UIView+ZZExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZZExt.m"; sourceTree = "<group>"; };
+		940E06B3228EFDEF00862DE5 /* UIView+ZZExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZZExt.h"; sourceTree = "<group>"; };
+		940E06B6228FB53600862DE5 /* YYClassInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYClassInfo.h; sourceTree = "<group>"; };
+		940E06B7228FB53600862DE5 /* YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYModel.h; sourceTree = "<group>"; };
+		940E06B8228FB53600862DE5 /* NSObject+YYModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYModel.m"; sourceTree = "<group>"; };
+		940E06B9228FB53600862DE5 /* YYClassInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYClassInfo.m; sourceTree = "<group>"; };
+		940E06BA228FB53600862DE5 /* NSObject+YYModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YYModel.h"; sourceTree = "<group>"; };
 		948EAA82228EA74400E5F7C1 /* HHPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HHPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		948EAA85228EA74400E5F7C1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		948EAA86228EA74400E5F7C1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +63,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		940E06B5228FB53600862DE5 /* YYModel */ = {
+			isa = PBXGroup;
+			children = (
+				940E06B6228FB53600862DE5 /* YYClassInfo.h */,
+				940E06B7228FB53600862DE5 /* YYModel.h */,
+				940E06B8228FB53600862DE5 /* NSObject+YYModel.m */,
+				940E06B9228FB53600862DE5 /* YYClassInfo.m */,
+				940E06BA228FB53600862DE5 /* NSObject+YYModel.h */,
+			);
+			path = YYModel;
+			sourceTree = "<group>";
+		};
 		948EAA79228EA74400E5F7C1 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +95,9 @@
 		948EAA84228EA74400E5F7C1 /* HHPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				940E06B5228FB53600862DE5 /* YYModel */,
+				940E06B3228EFDEF00862DE5 /* UIView+ZZExt.h */,
+				940E06B2228EFDEF00862DE5 /* UIView+ZZExt.m */,
 				948EAA85228EA74400E5F7C1 /* AppDelegate.h */,
 				948EAA86228EA74400E5F7C1 /* AppDelegate.m */,
 				948EAA88228EA74400E5F7C1 /* ViewController.h */,
@@ -175,8 +200,11 @@
 				948EAA8A228EA74400E5F7C1 /* ViewController.m in Sources */,
 				948EAAA6228EC12C00E5F7C1 /* HHPlayToolBar.m in Sources */,
 				948EAA95228EA74600E5F7C1 /* main.m in Sources */,
+				940E06BB228FB53600862DE5 /* NSObject+YYModel.m in Sources */,
 				948EAAA3228EB3CA00E5F7C1 /* HHAudioModel.m in Sources */,
 				948EAA9D228EAA0E00E5F7C1 /* HHPlayer.m in Sources */,
+				940E06B4228EFDEF00862DE5 /* UIView+ZZExt.m in Sources */,
+				940E06BC228FB53600862DE5 /* YYClassInfo.m in Sources */,
 				948EAA87228EA74400E5F7C1 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

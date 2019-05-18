@@ -39,6 +39,7 @@
 /** 开始播放 */
 - (void)playURL:(NSString *)urlString {
     if (_avPlayer ) {
+        [_avPlayer pause];
         _avPlayer = nil;
         _asset = nil;
         [_playerItem removeObserver:self forKeyPath:@"status" context:nil];
@@ -61,6 +62,9 @@
         NSLog(@"总时间：%ld",weakSelf.allTime);
         NSLog(@"当前时间：%ld",weakSelf.currentTime);
 //        NSLog(@"当前时间1：%d",player.currentItem.currentTime);
+        if (weakSelf.delegate && [weakSelf.delegate respondsToSelector:@selector(audioPlayerAllTime:currentTime:)]) {
+            [weakSelf.delegate audioPlayerAllTime:weakSelf.allTime currentTime: weakSelf.currentTime];
+        }
     }];
   
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:AVPlayerItemDidPlayToEndTimeNotification object:_avPlayer.currentItem];
@@ -74,24 +78,40 @@
         if (item.status == AVPlayerItemStatusReadyToPlay) {
             [_avPlayer play];
             //对播放界面的一些操作，时间、进度等
+        }else if (item.status == AVPlayerItemStatusUnknown) {
+            NSLog(@"未知错误");
+            if (self.delegate && [self.delegate respondsToSelector:@selector(audioPlayerFailPlay)]) {
+                [self.delegate audioPlayerFailPlay];
+            }
+        } else if (item.status == AVPlayerItemStatusFailed) {
+            NSLog(@"播放错误");
+            if (self.delegate && [self.delegate respondsToSelector:@selector(audioPlayerFailPlay)]) {
+                [self.delegate audioPlayerFailPlay];
+            }
         }
     }
 }
 - (void)playbackFinished:(NSNotification *)info {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(audioPlayerDidFinishPlay)]) {
+        [self.delegate audioPlayerDidFinishPlay];
+    }
 }
 /** 暂停播放 */
 - (void)pausePlayer {
-    
+    [_avPlayer pause];
 }
 
 /** 停止播放 */
 - (void)stopPlayer {
-    
+    [_avPlayer play];
 }
 
 /** 播放进度 */
-- (void)playerProgress:(CGFloat)progress {
+- (void)playerProgress:(NSInteger)progress {
+    CMTime changedTime = CMTimeMakeWithSeconds(progress, 1.0);
+    [_avPlayer seekToTime:changedTime completionHandler:^(BOOL finished) {
+        
+    }];
     
 }
 @end

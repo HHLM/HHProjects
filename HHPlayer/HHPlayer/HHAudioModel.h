@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HHAudioModel : NSObject
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *url;
++ (NSArray *)audioArray;
 @end
 
 NS_ASSUME_NONNULL_END

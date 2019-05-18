@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)audioPlayerDidFinishPlay;
 
+- (void)audioPlayerFailPlay;
+
+- (void)audioPlayerAllTime:(NSInteger)allTime currentTime:(NSInteger)cuttentTime;
 
 @end
 
@@ -44,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stopPlayer;
 
 /** 播放进度 */
-- (void)playerProgress:(CGFloat)progress;
+- (void)playerProgress:(NSInteger)progress;
 
 
 @end
