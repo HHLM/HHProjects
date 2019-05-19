@@ -51,6 +51,7 @@
     _playerItem = playerItem;
     AVPlayer *player = [[AVPlayer alloc] initWithPlayerItem:playerItem];
     _avPlayer = player;
+
     
     /// 添加监听.以及回调
     __weak typeof(self) weakSelf = self;
