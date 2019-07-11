@@ -13,18 +13,14 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        
         Method method1 = class_getInstanceMethod(self, @selector(run:));
         Method method2 = class_getInstanceMethod(self, @selector(getMethod));
-        
         IMP imp = imp_implementationWithBlock(^(id self){
             NSLog(@"方法被交换了");
         });
-
         /** 方法交换 */
         method_exchangeImplementations(method1, method2);
         class_replaceMethod([self class], @selector(getMethod), imp, sel_getName(@selector(getMethod)));
-        
     });
 }
 

@@ -6,7 +6,7 @@
 //  Copyright © 2019 where are you. All rights reserved.
 //
 
-
+# runtime知识点总结
 runtime 知识点总结：
  1.OC是一门动态语言，动态语言的本质就是因为有了Runtime，在运行时候可以进行消息转发，可以讲编译时候工作延迟到运行时期。
 这个不是由编译器来做，而是有运行时来做。
@@ -15,11 +15,11 @@ struct objc_class {
     Class _Nonnull isa  OBJC_ISA_AVAILABILITY;              //指针指向其所属的类
 #if !__OBJC2__
     Class _Nullable super_class                              //父类
-    const char * _Nonnull name                               //常量
-    long version                                             //版本
-    long info                                                //信息
-    long instance_size                                       //所占大小
-    struct objc_ivar_list * _Nullable ivars                  //成员列表
+    const char * _Nonnull name                              //常量
+    long version                                                       //版本
+    long info                                                             //信息
+    long instance_size                                             //所占大小
+    struct objc_ivar_list * _Nullable ivars                 //成员列表
     struct objc_method_list * _Nullable * _Nullable methodLists               //方法列表
     struct objc_cache * _Nonnull cache                       //缓存方法列表的 使用过的方法就在此结构体中
     struct objc_protocol_list * _Nullable protocols          //协议列表

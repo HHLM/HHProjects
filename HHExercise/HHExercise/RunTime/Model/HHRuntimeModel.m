@@ -26,8 +26,10 @@
     
     NSMutableArray *array = [NSMutableArray array];
     
-    NSString *where = something?[[NSString alloc] initWithFormat:something locale:[NSLocale currentLocale] arguments:list]:something;
+    NSString *where = something ? [[NSString alloc] initWithFormat:something locale:[NSLocale currentLocale] arguments:list] : something;
    
+    NSLog(@"%@",where);
+    
     id objc = something; //第一个参数
     
     [array addObject:objc];

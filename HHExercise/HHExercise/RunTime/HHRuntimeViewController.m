@@ -72,7 +72,7 @@
         NSString *keyName = [NSString stringWithUTF8String:varName];
         NSLog(@"copyPropertyName : %@",keyName);
         
-        /** property_getAttributes 函数挖掘属性的真实名称和 @encode 类型，返回 C字符串 */
+        /** property_getAttributes 函数挖掘属性的真实名称和 @ encode 类型，返回 C字符串 */
         const char *varAttributesName = property_getAttributes(property);
         NSString *attributes = [NSString stringWithUTF8String:varAttributesName];
         [self propertTypeConvert:attributes];
