@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HHRuntimeModel : NSObject
 {
-@private
+    @private
     NSString *age;
 }
 @property (nonatomic, copy) NSString *name;
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)walk;
 + (void)sleep;
 - (void)study;
-- (void)todoSomething:(NSString *)something,...;
+- (void)todoSomething:(NSString *)something, ...;
 @end
 
 NS_ASSUME_NONNULL_END

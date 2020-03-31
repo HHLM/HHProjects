@@ -77,10 +77,10 @@
     -| 消息转发，消息获得函数的参数和返回值类型 ，调用resolveInstanceMethod 方法。若返回是nil 抛出异常；非nil ，Runtime就会创建一个NSInvocation对象并发送-forwardInvocation:消息给目标对象
  第四步：调用新目标 forwardInvocation:anInvocation
  */
-
+//MARK:实例方法的动态解析
 + (BOOL)resolveInstanceMethod:(SEL)sel {
     
-    NSLog(@"%s",__func__);
+    NSLog(@"1：%s",__func__);
 #if 1
     return  [super resolveInstanceMethod:sel];
 #else
@@ -95,13 +95,14 @@
 #endif
    
 }
+//MARK:类方法的动态解析
 + (BOOL)resolveClassMethod:(SEL)sel {
-    NSLog(@"%s",__func__);
+    NSLog(@"class-> 1：%s",__func__);
     return  [super resolveClassMethod:sel];
 }
 
 - (id)forwardingTargetForSelector:(SEL)aSelector {
-    NSLog(@"%s",__func__);
+    NSLog(@"2：%s",__func__);
     id forward = [super forwardingTargetForSelector:aSelector];
     if (forward == nil) {
         //执行 methodSignatureForSelector: 方法
@@ -124,7 +125,7 @@
     }
 }
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    NSLog(@"%s",__func__);
+    NSLog(@"3：%s",__func__);
     NSMethodSignature *methodSigna = [super methodSignatureForSelector:aSelector];
     if (methodSigna == nil) {
         const char *type ="v@:";
@@ -140,6 +141,7 @@
     }
 }
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
+    NSLog(@"4：%s",__func__);
     SEL sel = @selector(runError);
     anInvocation.selector = sel;
     [anInvocation invokeWithTarget:self.class];

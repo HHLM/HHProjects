@@ -6,9 +6,8 @@
 //  Copyright © 2019 where are you. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
+#import "HHBaseViewController.h"
+@interface ViewController : HHBaseViewController
 
 
 @end

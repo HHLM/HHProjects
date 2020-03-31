@@ -18,21 +18,21 @@ extern void instrumentObjcMessageSends(BOOL);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        HHRuntimeModel *run = [HHRuntimeModel new];
-//        run.age = 100;
-        instrumentObjcMessageSends(YES);
-        [run study];
-        [run walk];
-        instrumentObjcMessageSends(NO);
-        
-        //执行对象 执行方法
-        
-        objc_msgSend(objc_getClass("HHRuntimeModel"), @selector(sleep));
-        objc_msgSend(run.class, @selector(sleep));
-        
-        HHMethod *method = [[HHMethod alloc] init];
-        
-        return 0;
+//        HHRuntimeModel *run = [HHRuntimeModel new];
+////        run.age = 100;
+//        instrumentObjcMessageSends(YES);
+//        [run study];
+//        [run walk];
+//        instrumentObjcMessageSends(NO);
+//        
+//        //执行对象 执行方法
+//        
+//        objc_msgSend(objc_getClass("HHRuntimeModel"), @selector(sleep));
+//        objc_msgSend(run.class, @selector(sleep));
+//        
+//        HHMethod *method = [[HHMethod alloc] init];
+//        
+//        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

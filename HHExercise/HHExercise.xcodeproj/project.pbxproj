@@ -238,8 +238,8 @@
 		94AD4986225455CB0069E487 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				94502965224CA5F200105FAE /* AppDelegate.m */,
 				94502964224CA5F200105FAE /* AppDelegate.h */,
+				94502965224CA5F200105FAE /* AppDelegate.m */,
 				9450296A224CA5F200105FAE /* Main.storyboard */,
 				9450296D224CA5F300105FAE /* Assets.xcassets */,
 				9450296F224CA5F300105FAE /* LaunchScreen.storyboard */,
@@ -627,14 +627,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				DEVELOPMENT_TEAM = 2V5VW5864D;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = HHExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHExercise";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haishake.HHExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,14 +645,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3AAKAAQAL9;
+				DEVELOPMENT_TEAM = 2V5VW5864D;
 				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				INFOPLIST_FILE = HHExercise/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-----.HHExercise";
+				PRODUCT_BUNDLE_IDENTIFIER = com.haishake.HHExercise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

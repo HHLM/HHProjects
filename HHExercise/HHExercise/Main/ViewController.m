@@ -55,7 +55,8 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.estimatedRowHeight = 100; //设置估计高度
-        _tableView.rowHeight = UITableViewAutomaticDimension; _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.rowHeight = UITableViewAutomaticDimension;
+        _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
     }return _tableView;
 }

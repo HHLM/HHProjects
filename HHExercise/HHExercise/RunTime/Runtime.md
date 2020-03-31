@@ -8,8 +8,8 @@
 
 # runtime知识点总结
 runtime 知识点总结：
- 1.OC是一门动态语言，动态语言的本质就是因为有了Runtime，在运行时候可以进行消息转发，可以讲编译时候工作延迟到运行时期。
-这个不是由编译器来做，而是有运行时来做。
+ 1.OC是一门动态语言，动态语言的本质就是因为有了Runtime，在运行时候可以进行消息转发，可以将编译时候工作延迟到运行时期。
+这个不是由编译器来做，而是有运行时（Runtime）来做。
 
 struct objc_class {
     Class _Nonnull isa  OBJC_ISA_AVAILABILITY;              //指针指向其所属的类
@@ -57,6 +57,13 @@ IMP 是一个函数指针 指向方法所在地址
  objc_msgSend(self，SEL)
 
  2.消息转发机制
+ 有6个步骤
+ 1、在objc_sendMsg caches中查找是否调用过这个方法，未找到就在当前类和父类中去查找 第二步
+ 2、递归遍历当前类和父类，`lookUpInstanceMethod ` 若还是找不到执行第三步
+ 3、动态解析方法：`resloveInstanceMethod`
+ 4、消息快速转发：`forwardingTargetForSelector`
+ 5、消息慢速转发：`methodSignaltureForSelector` && `forwardingTargetForSelector`
+ 6、还是没有找到的话就会抛出异常：`doseNotRecogizeSelector`
 
 
 

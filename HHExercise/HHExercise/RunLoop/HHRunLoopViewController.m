@@ -34,7 +34,7 @@
  
 runloop作用：
 1、保存程序的持续运行
-2、处理app各种时间（时钟、交互、PerformSelector）
+2、处理app各种事件（时钟、交互、PerformSelector）
 3、节省CPU资源、提高程序性能--（该做事做事，该休息休息）
 
 runloop休眠的原理：
@@ -60,12 +60,38 @@ runloop休眠的原理：
  0b 0000 0101
  
 √————————————————————————————— 我是分割线 —————————————————————————————————√
+ 
+
+
+ 
 */
+#pragma mark RunLoop面试问题分析
+
+/** 面试问题：开发中怎么时候使用RunLoop
+  
+ 1、APP启动时候添加了两个观察者 -- ??哪两个观察者
+     自动释放池会添加两个observe：一个用来监听Enter Runloop：此时调用_objc_autoreleasePoolPush()创建自动释放池。
+     一个用来监听RunLoop准备进入休眠状态：此时调用_objc_autoreleasePoolPop()和_objc_autoreleasePoolPush释放旧的释放池创建新的释放池，和监听RunLoop的退出：此时调用_objc_autoreleasePoolPop()释放自动释放池
+ 2、自动释放池什么作用、什么原理 ？
+    一个线程的自动释放池是一个指针堆栈
+ 3、runloop在开发中有什么用？
+    保证程序的持续运行和 while循环是有区别的（while循环太消耗性能）
+    合理利用CUP的资源，该干活时候干活该休息时候休息
+    处理APP各种事件：触摸、定时器、PerformSelector，子线程回到主线程也是RunLoop处理（如何处理的）
+ 4、RunLoop的执行过程是什么 ？
+    CFRunLoopRef是 CoreFoundation框架内的，提供了纯C函数的API是线程安全的。
+    NSRunLoop是基于CFRunLoopRef的封装提供了面向对象的API，但是这些API不是线程安全的
+    线程执行了这个函数后，函数会一直处于 "接受消息—>等待—>处理" 的循环中，直到这个循环结束（比如传入 quit 的消息）。
+ 5、RunLoop事件源：事件源、定时源
+ 6、RunLoop和线程的关系是一一对应的，RunLoop的销毁是在线程结束之后，主线程默认创建Runloop，子线程要自己去获取，不主动获取自己不会有
+ 一一对应得原因是什么呢：因为获取runloop的时候需要线程作为参数才能得到
+ 7、线程是工作最小单位，RunLoop和自动释放池为线程服务；
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSLog(@"runloop-------|%@",[NSRunLoop currentRunLoop]);
+    NSLog(@"runloop------- | %@",[NSRunLoop currentRunLoop]);
     [self addObserver];
     [self addHHThread];
     [self addCFRunLoop];
@@ -76,7 +102,6 @@ runloop休眠的原理：
 - (void)addObserver {
     //添加观察者 监听runloop状态
     CFAllocatorRef allref = CFAllocatorGetDefault();
-    
     /**
      @param observer  传入一个观察者，observer就是新创建的观察者
      @param activities 监听的活动
@@ -148,45 +173,45 @@ runloop休眠的原理：
 }
 - (void)addCFRunLoop {
     
-    /**
-     struct __CFRunLoop {
-     CFRuntimeBase _base;
-     pthread_mutex_t _lock;           locked for accessing mode list
+/**
+ struct __CFRunLoop {
+    CFRuntimeBase _base;
+    pthread_mutex_t _lock;           locked for accessing mode list
     __CFPort _wakeUpPort;           // used for CFRunLoopWakeUp
     Boolean _unused;
     volatile _per_run_data *_perRunData;              // reset for runs of the run loop
-    pthread_t _pthread; //runloop对应的线程
+    pthread_t _pthread;              //runloop对应的线程
     uint32_t _winthread;
-    CFMutableSetRef _commonModes;//存储的是字符串，记录所有标记为common的mode
-    CFMutableSetRef _commonModeItems;//存储所有commonMode的item(source、timer、observer)
-    CFRunLoopModeRef _currentMode;//当前运行的mode
-    CFMutableSetRef _modes;//存储的是CFRunLoopModeRef，
+    CFMutableSetRef _commonModes;   //存储的是字符串，记录所有标记为common的mode
+    CFMutableSetRef _commonModeItems;  //存储所有commonMode的item(source、timer、observer)
+    CFRunLoopModeRef _currentMode;  //当前运行的mode
+    CFMutableSetRef _modes; //存储的是CFRunLoopModeRef，
     struct _block_item *_blocks_head;
     struct _block_item *_blocks_tail;
     CFAbsoluteTime _runTime;
     CFAbsoluteTime _sleepTime;
     CFTypeRef _counterpart;
-     };
-     */
-    
+ };
+ */
+    /** 主runloop */
     CFRunLoopRef mainRunLoop = CFRunLoopGetMain();
-    
+    /** 当前runloop */
     CFRunLoopRef currentRunLoop = CFRunLoopGetCurrent();
-    
+    /** mode */
     CFRunLoopMode mode = CFRunLoopCopyCurrentMode(currentRunLoop);
     NSLog(@"model--:%@",mode);
-    
+    /** 所有mode */
     CFArrayRef arrayRef = CFRunLoopCopyAllModes(currentRunLoop);
     
     NSLog(@"arrayRef--:%@",arrayRef);
-    /**
-     mode四种方式：
-     kCFRunLoopCommonModes,     //一个集合 包含其他模式 被标记为common的mode集合（source/observe/timer）
-     UITrackingRunLoopMode,     //UI跟踪 模式
-     GSEventReceiveRunLoopMode, //接收系统事件
-     kCFRunLoopDefaultMode,     //默认的运行循环模式几乎涵盖了所有来源。如果没有特殊原因，您应该始终将源和计时器添加到此模式。
-                                可以使用符号kCFRunLoopDefaultMode和NSDefaultRunLoopMod
-     */
+/**
+ mode四种方式：
+ kCFRunLoopCommonModes,     //一个集合 包含其他模式 被标记为common的mode集合（source/observe/timer）
+ UITrackingRunLoopMode,     //UI跟踪 模式
+ GSEventReceiveRunLoopMode, //接收系统事件
+ kCFRunLoopDefaultMode,     //默认的运行循环模式几乎涵盖了所有来源。如果没有特殊原因，您应该始终将源和计时器添加到此模式。
+ 可以使用符号kCFRunLoopDefaultMode和NSDefaultRunLoopMod
+ */
 /**
     * 切换mode必须要退出当前runloop 然后再指定一个mode进入
     * 为了区分分割不同的source/timer/observer，使其不会相互影响
